@@ -169,6 +169,17 @@ git config --global user.email "xxx"
 ```
 
 
+## 提交历史
+
+
+### 查看本地和远程提交历史
+
+```sh
+git log --oneline --graph --decorate --all
+# see the changes introduced by  commit on file
+git show upstream/vitepress .gitignore
+```
+
 ## 远程仓库
 
 git remote 
