@@ -8,24 +8,26 @@ export default defineConfig({
   description: "insight, expresion, thoughts worth sharing",
   srcDir: 'src',
   cleanUrls: true,
+  ignoreDeadLinks:true,
   markdown:{
     lineNumbers: true,
     config:(md)=>{
      md.use(footnote_plugin)
-    }
+    },
+
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '每日阅读', link: '/readings/' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'radings',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
+          { text: 'Markdown Examples', link: '/readings/ddia/ch1.md' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
