@@ -218,6 +218,26 @@ git rm -r --cached .
 
 ## git merge
 
+
+```sh
+$ git log --oneline --graph --all
+* 9e18063 (HEAD -> main) empty commit trigger redeploy, clear firefox dns cache for CNAM
+| * 8188eec (upstream/vitepress) Delete CNAME
+| * 9268456 Create CNAME
+|/
+* 14d6ac7 fix the base options setting
+* b2ac4fc try to fix deploy site can not visis
+* a76d75f fix: github actions in build proecss Upload artifact path corrected
+* b5c8081 fix： 搭建好博客框架
+* 2b0bb1e fix: correct the deploy branch
+*   64bdf11 merge: merge gitignore conflict
+|\
+| * 5a15fe5 switch SSG to vitepress
+* 455ac6e fix：amend 改变了提交sha,远程和本地分支没有共同历史了
+* fc59259 update push config
+:
+```
+
 ```sh
 git merge upstream/vitepress --allow-unrelated-histories
 ```

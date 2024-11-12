@@ -9,7 +9,7 @@ export default defineConfig({
   srcDir: 'src',
   cleanUrls: true,
   ignoreDeadLinks:true,
-  base: '/repo/',
+  base: '/tech_insight/',
   markdown:{
     lineNumbers: true,
     config:(md)=>{

@@ -2,5 +2,6 @@ node_modules
 dist
 *.env
 [alias]
-    lg = log --stat --gprah --decorate --all
+    lg:clean = log --oneline --graph --decorate --all
+    lg:verbose = log --stat --graph --decorate --all
 
