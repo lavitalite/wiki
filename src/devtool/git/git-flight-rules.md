@@ -151,7 +151,15 @@ cat ~/.ssh/id_ed25519.pub | clip # windows
 
 推送分支
 ```sh
-git push <upstream-name> <localbranch>:<remotebranch>
+git push <upstream-name> <localbranch>:<remotebranch> # 推送本地分支到远程分支
+git branch --set-upstream-to=<upstream>/<remote-branch> <local-branch> # 设置上游分支
+gi
+```
+
+拉取分支
+
+```sh
+git fetch <remote> <branch>
 ```
 
 ```sh
