@@ -1,1 +1,0 @@
-import{_ as t,c as e,o}from"./chunks/framework.CGHvQLJz.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"devtool/git/git-eco.md","filePath":"devtool/git/git-eco.md"}'),a={name:"devtool/git/git-eco.md"};function c(r,i,s,n,d,p){return o(),e("div")}const m=t(a,[["render",c]]);export{l as __pageData,m as default};
