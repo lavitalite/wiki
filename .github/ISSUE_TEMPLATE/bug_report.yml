@@ -1,0 +1,10 @@
+name: "U+1F41E Bug Report"
+desription: Create a report to help us imporve
+body: 
+  - type: textarea
+    id: bug
+    attriutes: 
+      label: Describe the bug
+      description: here paste the boken image or links
+      placeholder: broken image or links
+  - type: textare
