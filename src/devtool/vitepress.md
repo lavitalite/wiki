@@ -17,7 +17,7 @@
 the docs directory is consider as the project root for the vitePress site.
 
 reserved location for  VitePress' config file, dev server cache, build output, and optional theme customization code.
-```tree
+```
 - docs # porject root
     - .vitepress # config dir
         - config.js

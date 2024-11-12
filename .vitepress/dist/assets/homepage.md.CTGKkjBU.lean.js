@@ -1,0 +1,9 @@
+import{_ as t,c as o,a0 as a,o as r}from"./chunks/framework.CGHvQLJz.js";const i="/assets/main.C_zTmLbF.png",g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"homepage.md","filePath":"homepage.md"}'),n={name:"homepage.md"};function l(s,e,p,h,u,d){return r(),o("div",null,e[0]||(e[0]=[a('<h2 id="欢迎来到-我的博客" tabindex="-1">欢迎来到 <strong>我的博客</strong>！ <a class="header-anchor" href="#欢迎来到-我的博客" aria-label="Permalink to &quot;欢迎来到 **我的博客**！&quot;">​</a></h2><p><img src="'+i+`" alt="phoilosophy"></p><p>!!! note &quot;&quot;</p><pre><code>\`Ideas Worth Sharing\`  这里主要记录我在写项目中的学习和思考
+
+- [x] the issue turn up frequently when people start using typescript.
+- [x] battle-proved best practice
+
+You can [follow for updates](https://xiyuan404.github.io/yet_another_insigificant/) and don&#39;t forget to ⭐ on [GitHub](https://github.com/xiyuan404?tab=repositories)
+
+您可以关注更新，不要忘记在 GitHub 上点亮⭐️
+</code></pre><p><strong>philosophy in action</strong></p><ul><li>[x] look up as you go</li><li>[x] workaround, however you get there(殊途同归)</li><li>[x] 拒绝闭门造车, willingness to learn</li><li>[x] “I hear and I forget.I see and I remember.I build and I understand.”</li><li>[x] 飞机上有 300 块砖头，掉下来一块还有几块？答：299 块， 把大象装进冰箱需要几步？答：三步，把冰箱门打开，大象塞进去，关上冰箱门。 把长颈鹿放进冰箱需要几步？答：四步，把冰箱门打开，把大象拿出来，把长颈鹿塞进去，把冰箱门关上。 森林里开大会谁没去？答：长颈鹿没去，它在冰箱里。 一个人过鳄鱼湖为什么没有被鳄鱼吃掉？答：因为它们去森林里开会去了。 那为什么那个人还是死了？答：他是被飞机上的那块砖砸死的</li><li>[x] 系统而不是碎片 step chain/ workflow/ data pipeline</li><li>[x] you could never fully know ahead the whole picture</li><li>[x] experience the problem, you can understand the solution</li><li>[x] dive and conquer （分而治之）</li><li>[x] feedback loop, shift the paradigameu</li></ul><p>本博客搭建受 <a href="https://oi-wiki.org" target="_blank" rel="noreferrer">OI Wiki</a>, <a href="https://vitepress.dev" target="_blank" rel="noreferrer">vitepress</a> 的启发,在此致谢。</p>`,7)]))}const f=t(n,[["render",l]]);export{g as __pageData,f as default};

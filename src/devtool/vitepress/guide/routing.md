@@ -29,7 +29,7 @@ the can config it via the `srcDir` config option.
 the `srcDir` option is resolved to relative to project root.
 with `srcDir: 'src'`, you file strcture should look like this
 
-```tree
+```
 . # project root
 - .vitepress/ #config dir
 - src # source dir
@@ -39,7 +39,7 @@ with `srcDir: 'src'`, you file strcture should look like this
 ```
 
 The rusulting source-to-url mapping
-```url-mapping
+```
 src/index.md --> /index.html(accessible as /)
 src/guide.md --> /guide.html
 ```
