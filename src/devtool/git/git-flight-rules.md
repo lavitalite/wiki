@@ -216,6 +216,12 @@ git rm -r --cached .
 ```
 
 
+## git merge
+
+```sh
+git merge upstream/vitepress --allow-unrelated-histories
+```
+
 ## git tags
 
 ## git lens
