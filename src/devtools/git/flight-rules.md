@@ -1,22 +1,30 @@
 
 
-What are "flight rules"?
+::: info What are "flight rules"?
 
 A guide for astronauts (now, programmers using Git) about what to do when things go wrong.
 
-    Flight Rules are the hard-earned body of knowledge recorded in manuals that list, step-by-step, what to do if X occurs, and why. Essentially, they are extremely detailed, scenario-specific standard operating procedures. [...]
+Flight Rules are the hard-earned body of knowledge recorded in manuals that list, step-by-step, what to do if X occurs, and why. Essentially, they are extremely detailed, scenario-specific standard operating procedures. [...]
 
-    NASA has been capturing our missteps, disasters and solutions since the early 1960s, when Mercury-era ground teams first started gathering "lessons learned" into a compendium that now lists thousands of problematic situations, from engine failure to busted hatch handles to computer glitches, and their solutions.
+NASA has been capturing our missteps, disasters and solutions since the early 1960s, when Mercury-era ground teams first started gathering "lessons learned" into a compendium that now lists thousands of problematic situations, from engine failure to busted hatch handles to computer glitches, and their solutions.
 
 — Chris Hadfield, An Astronaut's Guide to Life on Earth.
-
+::: 
 --- 
 
 
 
-## Editing Commits
+## 提交历史
 
-### what did I just commit?
+
+### 查看本地和远程提交历史
+
+```sh
+git log --oneline --graph --decorate --all
+git log --stat --graph --decorate --all
+# see the changes introduced by  commit on file
+git show upstream/vitepress .gitignore
+```
 git show
 
 git log -n1 -p
@@ -131,6 +139,25 @@ git checkout -b <branch> <sh1-of-commit> # create a branch from a commit
 ## 推送到远程仓库
 
 
+### 查看上有配置
+```sh
+git remote show upstream
+Enter passphrase for key '/c/Users/34476/.ssh/id_ed25519': 
+* remote upstream
+  Fetch URL: git@github.com:xiyuan404/yet_another_insigificant.git
+  Push  URL: git@github.com:xiyuan404/yet_another_insigificant.git
+  HEAD branch: main
+  Remote branches:
+    gh-pages  new (next fetch will store in remotes/upstream)
+    main      new (next fetch will store in remotes/upstream)
+    vitepress tracked
+  Local branch configured for 'git pull':
+    main merges with remote vitepress
+  Local ref configured for 'git push':
+    main pushes to main (local out of date)
+```
+
+
 ```sh
 echo "" > ~/.ssh/github_id_ed25519 # windows下创建文件
 ssh-keygen -t ed25519 -f ~/.ssh/github_id_ed25519 -C "bayesianifeg1@gmail.com" -N "office_only"
@@ -169,16 +196,7 @@ git config --global user.email "xxx"
 ```
 
 
-## 提交历史
 
-
-### 查看本地和远程提交历史
-
-```sh
-git log --oneline --graph --decorate --all
-# see the changes introduced by  commit on file
-git show upstream/vitepress .gitignore
-```
 
 ## 远程仓库
 

@@ -1,6 +1,6 @@
 
 
-## Setting a Public Base Path
+## Setting a served root Path
 
 vitepress assume the site is going to be deployed at the root path of a domain. 
 

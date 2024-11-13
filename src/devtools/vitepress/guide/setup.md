@@ -1,13 +1,22 @@
+---
+titile: Setup vitepress
+---
+
 ## install and setup
 
 Install vitepress with your preferred package manager:
+
+
+viepress shipped with core package
 
 ```sh
 $ npm add -D vitepress
 ```
 
-
 creat a config file manually or run `npx vitepress init` to boostrap a biolerplate
+
+
+
 
 
 ## Up and Running
