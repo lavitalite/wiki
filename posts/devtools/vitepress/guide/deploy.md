@@ -41,3 +41,8 @@ create a file named `deploy.yml` inside `.github/workflows` directory of your pr
 name: 
 ```
 
+
+
+::: info slugfiy
+It's an informal name given to a story during the production process. As the story winds its path from the beat reporter (assuming these even exist any more?) through to editor through to the "printing presses", this is the name it is referenced by, e.g., "Have you fixed those errors in the 'kate-and-william' story?".
+:::

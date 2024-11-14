@@ -3,13 +3,13 @@ import footnote_plugin from "markdown-it-footnote"
 
 
 const SITE_URL = 'https://blog.xiyuan.cc'
-const SITE_TITLE = "XiYuan's Tech Thought"
+const SITE_TITLE = "XiYuan's Tech Insight"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: SITE_TITLE,
   description: "insight,content, thoughts that worth sharing for dev-enthusiast",
-  srcDir: 'src',
+  srcDir: 'posts',
   cleanUrls: true,
   ignoreDeadLinks:true,
   base: '/tech_insight/',
@@ -42,7 +42,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://xiyuan404.github.io/tech_insight/' }
+      { icon: 'github', link: 'https://github.com/xiyuan404/tech_insight' }
     ],
     footer: {
       message: 'All Content retrived from genius In Web, All right reserved for them, Hereby granted<br/>本博客基于vitepress搭建<a href="https://vitepress.dev/" rel="noopener" target="_blank">power by vitepress</a>在此致谢。 '

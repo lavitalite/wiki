@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Moon Landing Project"
+  name: "Putting thoughts into words"
   text: "希望我写的东西能给你带来价值"
-  tageline: hope and fear, we need both 
+  tageline: hope and fear, we need both to deliver 
   actions:
     - theme: brand
       text: 主页
@@ -13,11 +13,14 @@ hero:
     - theme: alt
       text: 关于我
       link: /biograph.md
-    - theme: 博客历史列表
-      linke: /list.md
-
+    - theme: alt
+      text: articles
+      link: /list.md
+  image:
+    src: /public/logo.svg
+    alt: VitePress
 features:
-  - title: 每日阅读
+  - title: Building projects and Finding inspiration
     details: 大厂技术团队的博客，产品和工具的开源竞品，awesome framework or library中的编码思想和风格，项目完整落地过程，一切让我感兴趣的东西
   - title: 工欲善其事必先利其器
     details: 磨刀不误砍柴工，我喜欢一切让提高我开发体验的东西，DX(boost my developer experience)
@@ -30,6 +33,6 @@ features:
   - title: 跨端开发
     details: Taro, Uniapp, flutter, electron
   - title: AI
-  - details: AI agents, AI ops, LLM微调和开发
+    details: AI agents, AI ops, LLM微调和开发
 ---
 

@@ -1,6 +1,10 @@
+# Tech Insight 🎉 
+
+powered by (vitepress)[https://vitepress.dev/]
+
 <img src="src/public/logo.svg" width="150" alt="Blog Logo" />
 
-
+## Changelog
 
 > [!NOTE]
 > You are viewing the **v1-vitepress branch**,

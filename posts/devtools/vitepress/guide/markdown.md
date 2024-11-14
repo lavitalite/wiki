@@ -78,9 +78,11 @@ The value of `@` corresponds to the source root. By default it's the VitePress p
 group multiple code blocks
 
 
-## code block title
+### code block title
 
-on code injection, filename is used as title by default, we could provide a custom name
+for fenced code block, provide a custom title in `[]`
+
+on code injection, filename is used as title by default, we could provide a custom name in `[]`
 
 **Input**
 
@@ -88,23 +90,23 @@ on code injection, filename is used as title by default, we could provide a cust
 ::: code-group
 <!-- filename is used as -->
 
-```js:line-numbers=2 {1,3-4}
+```js:line-numbers=2 {1,3-} [fenced-block-name]
 export default {
   data () {
     return {
         msg: 'Highlighted!',
         msg: "focus", // [!code focus]
-        msg: "added", // [!code --]
-        msg: "deleted" // [!code ++]
-        msg: "deleted" // [!code error]
-        msg: "deleted" // [!code warning]
+        msg: "deleted", // [!code --]
+        msg: "added" // [!code ++]
+        msg: "error" // [!code error]
+        msg: "warning" // [!code warning]
     }
   }
 }
 
 ```
 
-<<< @/snippets/simple-icon-clone.ts{1-2 ts:line-numbers}
+<<< @/snippets/simple-icon-clone.ts{1-2 ts:line-numbers} [injected block name]
 :::
 ````
 
@@ -112,23 +114,23 @@ export default {
 
 ::: code-group
 
-```js:line-numbers=2 {1, 3-4}
+```js:line-numbers=2 {1, 3-5} [fenced-block-name]
 export default {
   data () {
     return {
         msg: 'Highlighted!',
         msg: "focus", // [!code focus]
-        msg: "added", // [!code --]
-        msg: "deleted" // [!code ++]
-        msg: "deleted" // [!code error]
-        msg: "deleted" // [!code warning]
+        msg: "deleted", // [!code --]
+        msg: "added" // [!code ++]
+        msg: "error" // [!code error]
+        msg: "warning" // [!code warning]
     }
   }
 }
 
 ```
 
-<<< @/snippets/simple-icon-clone.ts{1,2 ts:line-numbers} [custom code block name]
+<<< @/snippets/simple-icon-clone.ts{1,2 ts:line-numbers} [injected block name]
 
 :::
 

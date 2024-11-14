@@ -1,0 +1,34 @@
+
+
+
+/* hide content visually */
+
+.visually-hidden:not(:focus):not(:active) {
+    width:1px;
+    height: 1px;
+    clip-path: inset(50%);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+/* smooth scroll behaviour*/
+@media (prefers-reduced-motion: no-perference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+
+/* Only visible in dark(light) mode */
+@media not (prefers-color-scheme: dark) {
+    .only-when-dark {
+        display: none
+    }
+}
+
+@media not (prefers-color-scheme: light) {
+    .only-when-light {
+        display:none
+    }
+}
