@@ -1,4 +1,4 @@
-<img src="./public/logo.svg" width="150" alt="Blog Logo" />
+<img src="src/public/logo.svg" width="150" alt="Blog Logo" />
 
 
 
