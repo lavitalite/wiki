@@ -111,8 +111,10 @@ echo "node_modules" >> .gitignore
 ### 变更本地分支名
 
 ```sh
-git branch -m local_dev
+git branch -m <new-branch>
 ```
+
+
 
 
 
@@ -138,8 +140,16 @@ git checkout -b <branch> <sh1-of-commit> # create a branch from a commit
 
 ## 推送到远程仓库
 
+### 推送本地分支到远程分支
 
-### 查看上有配置
+```sh
+
+git push -u <remote-repo> <remote-branch> # 将本地所在分支推送到远程分支
+git push <remote-repo> <local-repo>:<remote-repo> # 指定本地分支推送到远程分支
+```
+
+
+### 查看远程仓库有配置
 ```sh
 git remote show upstream
 Enter passphrase for key '/c/Users/34476/.ssh/id_ed25519': 

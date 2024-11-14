@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Moon Landing Project"
   text: "希望我写的东西能给你带来价值"
-  # tagline: resiltent, rentless
+  tageline: hope and fear, we need both 
   actions:
     - theme: brand
       text: 主页
@@ -13,6 +13,8 @@ hero:
     - theme: alt
       text: 关于我
       link: /biograph.md
+    - theme: 博客历史列表
+      linke: /list.md
 
 features:
   - title: 每日阅读

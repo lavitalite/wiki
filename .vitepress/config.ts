@@ -60,6 +60,7 @@ function sidebarDevtools(): DefaultTheme.SidebarItem[]{
         {text: "nutshell", link: "vitepress/guide/nutshell"},
         {text: "markdown", link: "vitepress/guide/markdown"},
         {text: "asset handling", link: "vitepress/guide/asset"},
+        {text: "customization", link: "vitepress/guide/customization"},
       ]
     },
     {
