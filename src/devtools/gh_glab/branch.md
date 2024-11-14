@@ -38,3 +38,4 @@ branch 'main' set up to track 'upstream/v1-vitepress'.
 ## change the default branch for a project
 
 
+settings:nav->general:sidebar->default branch:option->switch-to-another-branch:action

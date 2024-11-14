@@ -4,4 +4,4 @@
 
 > [!NOTE]
 > You are viewing the **v1-vitepress branch**,
-> which is a mirgration from [v0-mkdocs branch](https://github.com/shikijs/shiki/tree/v0). 
+> which is a mirgration from [v0-mkdocs branch](https://github.com/xiyuan404/tech_insight/tree/v0-mkdocs). 
