@@ -127,15 +127,7 @@ exhaustively check （穷尽检查）
 
 
 
-
-
-
-
-
-
-
-![dev_tool](images/dev_tool_shortcut.png)
-
+view:menu -> Developer -> Developer Tools
 
 
 ## user config
