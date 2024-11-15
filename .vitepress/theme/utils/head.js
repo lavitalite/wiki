@@ -7,7 +7,6 @@ export const metaProperty = (property, content) => metaTag({property, content})
 
 
 
-export const metaName = (property, name) => metaTag({name, content })
-
+export const metaName = (name, content) => metaTag({ name, content })
 
 const metaTag = attrs => attrs.content ? ['meta', attrs] : []

@@ -17,6 +17,9 @@ NASA has been capturing our missteps, disasters and solutions since the early 19
 ## 提交历史
 
 
+
+
+
 ### 查看本地和远程提交历史
 
 ```sh
@@ -77,6 +80,15 @@ git add <file-cleanup-scerct>
 git commit --amend --no-edit
 git push --force-with-lease origin <remote-branch>
 ```
+
+
+```sh
+$ git status
+On branch main
+Your branch is up to date with 'upstream/v1-vitepress'.
+nothing to commit, working tree clean
+```
+
 
 remove entire file but keep it locally
 ```sh

@@ -14,6 +14,10 @@ data.forEach(article => {
 })
 
 onBeforeMount(() => {
+    /**
+     * try to access brower API on import
+     * use code that assumes a brower env on import, dynamically import them
+     */
   import('./utils/frontmatter').then(({ excerptToLink }) => {
     data.forEach(excerptToLink)
   })

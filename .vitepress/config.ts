@@ -1,5 +1,6 @@
-import { type DefaultTheme, defineConfig } from 'vitepress'
+import { type DefaultTheme, defineConfig, type HeadConfig } from 'vitepress'
 import footnote_plugin from "markdown-it-footnote"
+import { metaName } from './theme/utils/head'
 
 
 const SITE_URL = 'https://blog.xiyuan.cc'
@@ -13,6 +14,9 @@ export default defineConfig({
   cleanUrls: true,
   ignoreDeadLinks:true,
   base: '/tech_insight/',
+  head: [
+    metaName('google-site-verification', 'uaXLiv-7IiBgEuYIW133LHlLOdqfTbktmr58H_i5Ox4') as HeadConfig 
+  ],
   markdown:{
     lineNumbers: true,
     math: true,
@@ -56,11 +60,11 @@ function sidebarDevtools(): DefaultTheme.SidebarItem[]{
       text: "Vitepress",
       collapsed: false,
       items: [
-        {text: "setup", link: "vitepress/guide/setup"},
-        {text: "nutshell", link: "vitepress/guide/nutshell"},
-        {text: "markdown", link: "vitepress/guide/markdown"},
-        {text: "asset handling", link: "vitepress/guide/asset"},
-        {text: "customization", link: "vitepress/guide/customization"},
+        {text: "setup", link: "vitepress/setup"},
+        {text: "nutshell", link: "vitepress/nutshell"},
+        {text: "markdown", link: "vitepress/markdown"},
+        {text: "asset handling", link: "vitepress/asset"},
+        {text: "seo for CMS", link: "vitepress/seo"},
       ]
     },
     {
