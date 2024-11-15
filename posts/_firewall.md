@@ -1,4 +1,4 @@
-# 网络工具
+## 网络工具
 Fndroid clash 内核
 
 [clash wiki](https://clash.wiki/introduction/getting-started.html)
@@ -60,3 +60,13 @@ iOS 客户端：
     ShellClash 下载
     Passwall 下载
     SSR Plus 下载
+
+## 网络环境检测
+
+```sh
+networksetup -getwebproxy Wi-Fi
+Enabled: Yes
+Server: 127.0.0.1
+Port: 6152
+Authenticated Proxy Enabled: 0
+```

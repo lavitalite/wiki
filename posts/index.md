@@ -17,7 +17,7 @@ hero:
       text: articles
       link: /list.md
   image:
-    src: /public/logo.svg
+    src: /logo.svg
     alt: VitePress
 features:
   - title: Building projects and Finding inspiration

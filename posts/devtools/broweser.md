@@ -4,11 +4,21 @@
 
 进程管理
 
-### about:profilo
+### about:support
+
+where you can find profile folder
 
 
 
-### shortcuts
+### keyboard shortcuts
 
+cycle through tabs
 `ctrl+tab` or `ctrl+PgDn` 下一标签页
 `ctrl+shift+tab` `ctrl+PgUp` 上一标签页
+
+### enable vertical tab config
+
+about:config
+
+sidebar:revamp
+sidever.verticaltabs
