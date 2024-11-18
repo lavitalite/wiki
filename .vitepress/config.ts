@@ -44,7 +44,8 @@ export default defineConfig({
 
     sidebar: {
       '/devtools': {base: '/devtools/', items: sidebarDevtools()},
-      '/devtools/reference/': { base: 'devtools/reference/', items: sidebarReference() }
+      '/devtools/reference/': { base: 'devtools/reference/', items: sidebarReference() },
+      '/xlab':  { base: '', items: sidebarXlab()}
     },
 
     socialLinks: [
@@ -55,6 +56,19 @@ export default defineConfig({
     }
   }
 })
+
+
+function sidebarXlab(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: "find inspiration and build awesome project",
+      collapsed: false,
+      items: [
+        { text: 'file uploading',  link: 'xlab/upload'}
+      ]
+    }
+  ]
+}
 
 function sidebarDevtools(): DefaultTheme.SidebarItem[]{
   return [
