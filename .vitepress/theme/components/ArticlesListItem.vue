@@ -1,6 +1,6 @@
 <script setup>
 
-import Tags from './tags' 
+// import Tags from './Tags' 
 
 const props = defineProps({
     article: {

@@ -8,7 +8,7 @@
 - load from file
 - build from dockerflie
 
-![](../img/docker-stages.png)
+![](../imgs/docker-stages.png)
 
 
 
@@ -51,7 +51,7 @@ RUN apt-get update && \
 
 ### 构建参数和环境变量
 
-![](../img/docker_env_vs_args.webp)
+![](../imgs/docker_env_vs_args.webp)
 
 ```dockerfile
 FROM ubuntu:20.04
@@ -115,5 +115,5 @@ iptables
 查询本机出口公网ip`curl ifconfig.me` `tracert www.google.com`
 查询本机内网ip`ipconfig | grep en0` `ipconfig | grep wlan`
 
-![](../img/ip_break_down.jpg)
+![](../imgs/ip_break_down.jpg)
 :::

@@ -1,18 +1,12 @@
-import { createContentLoader, createMarkdownRenderer } from 'vitepress'
+/*import { createContentLoader, createMarkdownRenderer } from 'vitepress'
 import {
   comparePublicationDate,
   isPublished,
   tagsToArray
-} from "./.vitepress/utils/frontmatter.mjs"
+} from "../.vitepress/utils/frontmatter.mjs"
 
 const mdRenderer = await createMarkdownRenderer()
 
-/**
- * Load `/articles`:
- * - sort articles by date
- * - group articles by year
- * - convert `frontmatter.excerpt` Markdown to HTML
- */
 export default createContentLoader('articles/*.md', {
   excerpt: true,
 
@@ -44,3 +38,5 @@ export default createContentLoader('articles/*.md', {
     return articles
   }
 })
+
+*/

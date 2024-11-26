@@ -24,6 +24,10 @@ function domInject(inject: DomInject = 'body-last') {
 ```
 
 
+
+
+
+
 性能优化
 
 将多个SVG合并为sprite
@@ -41,3 +45,10 @@ SVG的自动导入
 编译时处理
 按需加载
 体积优化
+
+## cache
+
+Browser Cache 
+`max-age=31536000,immutable`
+
+File System Cache 

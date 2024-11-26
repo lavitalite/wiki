@@ -10,12 +10,12 @@
 
 容器技术出现之前
 
-![](./img/why_container_bf.webp){width=50%}
+![](../imgs/why_container_bf.webp){width=50%}
 容器技术出现之后
-![](./img/why_container_af.webp){width=50%}
+![](../imgs/why_container_af.webp){width=50%}
 
 容器vs虚拟机
-![](./img/container_vs_vm.webp)
+![](../imgs/container_vs_vm.webp)
 
 
 
@@ -38,7 +38,7 @@ Cgroups(Control Groups)就负责资源管理控制作用，比如进程组使用
 
 ## 架构
 
-![](./img/docker-architecture.webp)
+![](../imgs/docker-architecture.webp)
 
 
 
