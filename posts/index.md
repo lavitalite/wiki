@@ -20,8 +20,8 @@ hero:
     src: /logo.svg
     alt: VitePress
 features:
-  - title: Building projects and Finding inspiration
-    details: 大厂技术团队的博客，产品和工具的开源竞品，awesome framework or library中的编码思想和风格，项目完整落地过程，一切让我感兴趣的东西
+  - title: 设计观察和产品复刻
+    details: 重复造轮子，大厂技术团队的博客，产品和工具的开源竞品，awesome framework or library中的编码思想和风格，项目完整落地过程，一切让我感兴趣的东西,
   - title: 工欲善其事必先利其器
     details: 磨刀不误砍柴工，我喜欢一切让提高我开发体验的东西，DX(boost my developer experience)
   - title: 护城河，技术壁垒和无可替代性
