@@ -149,6 +149,18 @@ git checkout -b <branch> <sh1-of-commit> # create a branch from a commit
 
 ### 切换分支
 
+## 远程分支
+
+
+手动删除本地的远程分支引用
+
+```sh
+$ git branch -dr upstream/gh-pages
+>> git branch -dr upstream/v0-mkdocs
+Deleted remote-tracking branch upstream/gh-pages (was c76c8cb).
+Deleted remote-tracking branch upstream/v0-mkdocs (was 6b48876).
+```
+
 
 ## 推送到远程仓库
 

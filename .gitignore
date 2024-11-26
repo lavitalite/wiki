@@ -1,5 +1,6 @@
 node_modules
 dist
+cache
 *.env
 [alias]
     lg:clean = log --oneline --graph --decorate --all

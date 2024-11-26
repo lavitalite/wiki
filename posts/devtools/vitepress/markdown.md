@@ -106,7 +106,7 @@ export default {
 
 ```
 
-<<< @/snippets/simple-icon-clone.ts{1-2 ts:line-numbers} [injected block name]
+<<< @/snippets/-clone.ts{1-2 ts:line-numbers} [injected block name]
 :::
 ````
 
@@ -130,7 +130,7 @@ export default {
 
 ```
 
-<<< @/snippets/simple-icon-clone.ts{1,2 ts:line-numbers} [injected block name]
+<<< @/snippets/math-utils.ts{1,2 ts:line-numbers} [injected block name]
 
 :::
 

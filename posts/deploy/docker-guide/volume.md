@@ -1,0 +1,1 @@
+![](../imgs/types-of-mounts.webp)
