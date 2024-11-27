@@ -1,16 +1,20 @@
-import './custom.css'
+
 import DefaultTheme from 'vitepress/theme'
 import Tags from './components/Tags.vue'
 import type { Theme } from 'vitepress'
-import {watch} from 'vue'
+import {h, watch} from 'vue'
+import Layout from './Layout.vue'
 // import DateTime from './components/DateTime.vue'
 
 import './rainbow.css'
 import './custom.css'
-
+import './overwrite.css'
 
 export default {
     extends: DefaultTheme,
+    Layout: () => {
+      return h(Layout)
+    },
     enhanceApp({ app, router }) {
       // app.component('datetime', DateTime)
       app.component('tags', Tags)
@@ -51,18 +55,30 @@ export default {
 
 let homePageStyle:HTMLStyleElement | undefined
 
+
+
 function updateHomePageStyle(value: boolean) {
-  debugger
+  
   if (value) {
     if (homePageStyle)
       return
 
     homePageStyle = document.createElement('style')
     homePageStyle.innerHTML = `
-    :root {
+    :root{
       animation: rainbow 12s linear infinite;
-    }`
+      --vp-c-text-1: var(--vp-c-brand-1);
+    }
+
+
+     img[src*="logo.svg"] {
+      // color: var(--vp-c-success-3);
+      // fill: url(#logo);
+      animation: rainbow-svg 12s linear 1s infinite;
+     }
+    `
     document.body.appendChild(homePageStyle)
+    // canvasInject()
   }
   else {
     if (!homePageStyle)

@@ -648,3 +648,11 @@
     --vp-c-brand-next: #009ff7;
   }
 }
+@keyframes rainbow-svg {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}

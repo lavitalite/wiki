@@ -1,0 +1,5 @@
+
+p.text:has(> p.hero-text-overwrite){
+    font-size:1.2rem;
+    color: var(--vp-c-text-2)
+}
