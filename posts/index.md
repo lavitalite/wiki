@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Putting thoughts into words"
-  text: <p  class="hero-text-overwrite">"希望我写的东西能给你带来价值"</p>
+  text: <span  class="hero-text-overwrite">"希望我写的东西能给你带来价值"</span>
   tageline: hope and fear, we need both to deliver 
   actions:
     - theme: brand
@@ -28,7 +28,11 @@ features:
     details: 磨刀不误砍柴工，我喜欢一切让提高我开发体验的东西，DX(boost my developer experience)
   - icon: 🫣
     title: 护城河，技术壁垒和无可替代性
-    details: 音视频开发， 地图可视化，数据可视化和3d可视化， web3, AI agent ...<br/>前沿技术的学习曲线是高，但热爱带来源源不断的心力支持
+    details: 
+      webdav音视频开发
+      canvas,svgwebgl地图可视化，数据可视化和3d可视化
+      web3
+      websocket即时通讯
   - icon: 🩹
     title: 懂产品的技术
     details: B端企业服务产品

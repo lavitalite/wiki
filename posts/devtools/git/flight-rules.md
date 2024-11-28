@@ -136,7 +136,14 @@ git branch -m <new-branch>
 git branch # list local branches
 git branch -r # list remote branches
 git branch -a # list both local and remote branches
+
+# Create a local tracking branch:
+git checkout -b v0-mkdocs upstream/v0-mkdocs 
+#  inspect the branch without creating a local branch:
+git checkout -d remotes/upstream/v0-mkdocs
 ```
+
+
 
 ### 新建分支
 
