@@ -135,3 +135,16 @@ eval "$(oh-my-posh init zsh)"
 # 下面一个命令要加 sudo 提权
 > sudo scoop install FantasqueSansMono-NF
 ```
+
+
+## 查看executable安装路径
+
+
+clones the nvm repository to ~/.nvm
+```sh
+$ command -v node
+/bin/node
+$ command -v npm
+/mnt/c/Program Files/nodejs//npm
+```
+

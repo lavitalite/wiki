@@ -136,7 +136,27 @@ git branch -m <new-branch>
 git branch # list local branches
 git branch -r # list remote branches
 git branch -a # list both local and remote branches
+
+# Create a local tracking branch:
+git checkout -b v0-mkdocs upstream/v0-mkdocs 
+#  inspect the remote branch without creating a local branch:
+git checkout -d remotes/upstream/v0-mkdocs
 ```
+
+
+### 变更覆盖
+
+```sh
+git reset --hard HEAD # 重置 暂存区 和 工作区 
+git reset --mixed HEAD # files won't change, difss won't be staged
+git reset --soft [commit_id] # moving head, working tree files won't change, diffs will be staged for commit
+git reset --keep <commit_id>
+
+git checkout -- . #  撤销当前目录下unstage change
+```
+
+
+
 
 ### 新建分支
 
