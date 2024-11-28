@@ -33,3 +33,9 @@ docker + 管理的对象（比如容器，镜像） + 具体操作（比如创�
 `docker container stop cd3 269 34b 751` 批量停止
 `docker container rm $(docker container ps -ap)` 批量删除
 :::
+
+
+## manage docker as a not-root user 
+
+
+
