@@ -72,7 +72,9 @@ Authenticated Proxy Enabled: 0
 ```
 
 
-## network connection troubleshooting
+## network connection troubleshooting steps
+
+
 
 
 
@@ -81,6 +83,8 @@ Authenticated Proxy Enabled: 0
 使用OpenDNS（208.67.222.222）或GoogleDNS（8.8.8.8）第三方的DNS服务器
 自己用VPS搭建DNS服务器
 修改机器host文件，直接IP访问
+domain name may not be resolved locally at all.
+域名可能根本无法在本地解析。
 
 ### ip封锁
 使用HTTP代理。客户端不在直接请求目标服务器，而是请求代理服务器，代理服务器在去请求目标服务器。
@@ -95,7 +99,7 @@ http/https/socks5 代理、机场流量转发 (懂的)、软路由 (相当强悍
 
 ## socket
 client sent
-http 单向通讯
+http session based
 
 IM即时通讯
 server sent
@@ -180,6 +184,23 @@ SYN 是用来请求建立连接（建立套接字）的
 
 ## 代理
 
+查看代理配置
+wsl2 vEthernet
+```sh
+env | grep -i proxy
+$ ipconfig
+IPv4 地址 . . . . . . . . . . . . : 192.168.208.1
+$ env | grep proxy
+https_proxy=http://192.168.208.1:7897
+all_proxy=http://192.168.208.1:7897
+http_proxy=http://192.168.208.1:7897
+
+# 代理上启用Allow LAN 
+```
+
+
+
+
 ### 正向代理和反向代理
 
 clien-side aware
@@ -193,8 +214,29 @@ scoket hook
 ## 网络代理
 
 ### 系统代理
-Cocoa 套件开发的，默认就是支持系统代理接管
-终端的工具，都不是基于 Cocoa 套件开发的， POSIX 标准。一般都是跨平台的，使用 c/ruby 等运行时网络库来实现网络请求
+
+
+#### takeover a network request of local program
+
+If the system is configured with a proxy server, the program will not directly connect to the target server when executing a network request, but will instead generate a connection to the proxy server
+enabling the “Set as System Agent” option will register itself as a proxy server 
+
+As for cli, since they use the POSIX interface to make network requests,configure the proxy through the env variable https_proxy and http_proxy, 
+
+#### takeover a network request from another device
+
+
+#### proxy protocol
+
+- Inform the proxy server, the hostname and port number of the target server.
+
+- Send authentication information for proxy server authentication. (optional)
+
+- Encryption of data transmissions. (optional)
+
+### HTTP Proxy and TCP Proxy
+
+HTTP proxy: 代理服务器接收请求，转发请求，获取 HTTP 响应，然后将其转发到客户端
 
 ### 虚拟网卡
 
