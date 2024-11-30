@@ -32,3 +32,11 @@
         display:none
     }
 }
+
+body:has(.VPHome) {
+pointer-events: none;
+}
+
+.VPHome .actions {
+    pointer-events: auto;
+}

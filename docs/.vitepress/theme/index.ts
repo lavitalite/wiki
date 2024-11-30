@@ -2,7 +2,7 @@
 import DefaultTheme from 'vitepress/theme'
 import Tags from './components/Tags.vue'
 import type { Theme } from 'vitepress'
-import {h, watch, onMounted} from 'vue'
+import { h, watch, onMounted } from 'vue'
 import Layout from './Layout.vue'
 // import DateTime from './components/DateTime.vue'
 
@@ -15,15 +15,15 @@ import 'virtual:group-icons.css'
 
 
 export default {
-    extends: DefaultTheme,
-    Layout: () => {
-      return h(Layout)
-    },
-    enhanceApp({ app, router }) {
-      // app.component('datetime', DateTime)
-      app.component('tags', Tags)
-     
-      
+  extends: DefaultTheme,
+  Layout: () => {
+    return h(Layout)
+  },
+  enhanceApp({ app, router }) {
+    // app.component('datetime', DateTime)
+    app.component('tags', Tags)
+
+
     if (typeof window === 'undefined')
       return
 
@@ -32,38 +32,36 @@ export default {
       () => updateHomePageStyle(location.pathname === '/tech_insight/'),
       { immediate: true },
     )
-    },
+  },
 
-  } satisfies Theme
+} satisfies Theme
 
 
-  onMounted(() => {
-    // Detect browser and add class for conditional styling
-    if (typeof window === 'undefined')
-      return
-    
-    const browser = navigator.userAgent.toLowerCase()
-    if (browser.includes('chrome'))
-      document.documentElement.classList.add('browser-chrome')
-    else if (browser.includes('firefox'))
-      document.documentElement.classList.add('browser-firefox')
-    else if (browser.includes('safari'))
-      document.documentElement.classList.add('browser-safari')
-  })
+if (typeof window !== 'undefined') {
+
+  const browser = navigator.userAgent.toLowerCase()
+  if (browser.includes('chrome'))
+    document.documentElement.classList.add('browser-chrome')
+  else if (browser.includes('firefox'))
+    document.documentElement.classList.add('browser-firefox')
+  else if (browser.includes('safari'))
+    document.documentElement.classList.add('browser-safari')
+}
+
 
 
 /** 
  * homepage rainbow aniamtion
  *  样式动态注入
-*/ 
+*/
 
 
-let homePageStyle:HTMLStyleElement | undefined
+let homePageStyle: HTMLStyleElement | undefined
 
 
 
 function updateHomePageStyle(value: boolean) {
-  
+
   if (value) {
     if (homePageStyle)
       return

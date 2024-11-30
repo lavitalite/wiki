@@ -7,7 +7,7 @@ import path from 'node:path'
 const SITE_URL = "https://blog.xiyuan.cc";
 const SITE_TITLE = "XiYuan's Tech Insight";
 
-export const BASE_PATH = "/tech-insight/";
+export const BASE_PATH = "/tech_insight/";
 
 const SidebarXLab: DefaultTheme.SidebarItem[] = [
   
@@ -100,7 +100,6 @@ export default defineConfig({
   base: BASE_PATH,
   outDir: './dist',
   // srcExclude: ["oss"],
-  assetsDir: 'static',
   lastUpdated:true, 
   head: [
     metaName(
@@ -111,6 +110,16 @@ export default defineConfig({
     ['link', { rel: 'alternate icon', href: `${BASE_PATH}favicon.ico`, type: 'image/png', sizes: '16x16' }],
   ],
   vite: {
+    build: {
+      rollupOptions: {
+         // 打包分类
+        output: {
+          // chunkFileNames: 'assets/js/[name]-[hash].js',
+          // entryFileNames: 'assets/js/[name]-[hash].js',
+          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+        }
+      }
+    },
     plugins: [
       groupIconVitePlugin(),
     ],

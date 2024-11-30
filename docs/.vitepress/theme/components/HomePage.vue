@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, watch, onUnmounted } from 'vue'
-import { useTheme } from './useTheme'
+import { useTheme } from './Particles/useTheme'
 
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 const { isDark } = useTheme()
@@ -172,10 +172,5 @@ onUnmounted(() => {
   z-index: -1;
   pointer-events: auto;
 }
-:global(.VPHome body) {
-  pointer-events: none;
-}
-:global(.VPHome .actions) {
-  pointer-events: auto;
-}
+
 </style>
