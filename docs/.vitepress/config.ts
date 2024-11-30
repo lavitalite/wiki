@@ -98,7 +98,7 @@ export default defineConfig({
   cleanUrls: true,
   // srcDir: 'docs',
   base: BASE_PATH,
-  outDir: './dist',
+  // outDir: './dist',
   // srcExclude: ["oss"],
   lastUpdated:true, 
   head: [
@@ -116,7 +116,7 @@ export default defineConfig({
         output: {
           // chunkFileNames: 'assets/js/[name]-[hash].js',
           // entryFileNames: 'assets/js/[name]-[hash].js',
-          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+          // assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
         }
       }
     },
