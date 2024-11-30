@@ -2,7 +2,7 @@
 import DefaultTheme from 'vitepress/theme'
 import Tags from './components/Tags.vue'
 import type { Theme } from 'vitepress'
-import {h, watch} from 'vue'
+import {h, watch, onMounted} from 'vue'
 import Layout from './Layout.vue'
 // import DateTime from './components/DateTime.vue'
 
@@ -37,18 +37,19 @@ export default {
   } satisfies Theme
 
 
-  if(typeof window !== undefined) {
-     // detect browser, add to class for conditional styling
+  onMounted(() => {
+    // Detect browser and add class for conditional styling
+    if (typeof window === 'undefined')
+      return
+    
     const browser = navigator.userAgent.toLowerCase()
-    if ( browser.includes('chrome'))
+    if (browser.includes('chrome'))
       document.documentElement.classList.add('browser-chrome')
-    else if (browser.includes('firefox')){
+    else if (browser.includes('firefox'))
       document.documentElement.classList.add('browser-firefox')
-    }
-    else if (browser.includes('safari')){
-      document.documentElement.classList.add('browser.safari')
-    }
-  }
+    else if (browser.includes('safari'))
+      document.documentElement.classList.add('browser-safari')
+  })
 
 
 /** 
