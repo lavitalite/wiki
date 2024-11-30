@@ -8,8 +8,9 @@ By Developer, for Developer
 </p>
 
 <p align="center">
-<a href=""><img src="https://img.shields.io/badge/Version-0.1.0-a7f3d0?labelColor=%23047857
-" alt="NPM version"></a>
+<a href="">
+<img src="https://img.shields.io/badge/Version-0.1.0-a7f3d0?labelColor=%23047857" alt="NPM version" />
+</a>
 </p>
 
 <br>
