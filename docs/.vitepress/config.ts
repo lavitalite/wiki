@@ -98,7 +98,10 @@ export default defineConfig({
   cleanUrls: true,
   // srcDir: 'docs',
   base: BASE_PATH,
+  outDir: './dist',
   srcExclude: ["oss"],
+  assetsDir: 'static',
+  lastUpdated:true, 
   head: [
     metaName(
       "google-site-verification",
