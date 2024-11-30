@@ -147,7 +147,7 @@ export default defineConfig({
   },
   themeConfig: {
 
-
+    logo: '/logo.svg',
     search: {
       provider: 'algolia',
       options: {
@@ -170,12 +170,6 @@ export default defineConfig({
       message:
         'All Content retrived from genius In Web, All right reserved for them, Hereby granted<br/>本博客基于vitepress搭建<a href="https://vitepress.dev/" rel="noopener" target="_blank">power by vitepress</a>在此致谢。 ',
     },
-  
-    /*
-    carbonAds: {
-      code: 'CESI4K3W',
-      placement: 'iconifydesign',
-    }, */
   },
   async transformPageData(pageData, { siteConfig }) {
       console.log(pageData)
