@@ -47,14 +47,6 @@ jobs:
         run:   pnpm install # npm ci   / yarn install / bun install
       - name: Build with VitePress
         run:  pnpm docs:build  # or npm run docs:build / yarn docs:build / bun run docs:build
-      - name: Check dist dir location
-        run: |
-          EXPECTED_BUILD_DIR="docs/.vitepress/dist"
-          
-          if [ ! -d "${EXPECTED_BUILD_DIR}" ]; then
-          echo "Error: Build directory ${EXPECTED_BUILD_DIR} does not exist"
-          exit 1
-        fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
