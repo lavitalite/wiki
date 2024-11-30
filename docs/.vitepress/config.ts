@@ -99,7 +99,7 @@ export default defineConfig({
   // srcDir: 'docs',
   base: BASE_PATH,
   outDir: './dist',
-  srcExclude: ["oss"],
+  // srcExclude: ["oss"],
   assetsDir: 'static',
   lastUpdated:true, 
   head: [

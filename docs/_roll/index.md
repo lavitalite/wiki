@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 import { onMounted } from 'vue'
 import { data } from './index.data.ts'
 onMounted( () => {
@@ -7,7 +7,7 @@ onMounted( () => {
   const randDir =  data[Math.floor(Math.random() * data.length)]
   window.location.replace(`${BASE_PATH}/${randDir}`)
 })
-</script> -->
+</script>
 
 
 loading....
