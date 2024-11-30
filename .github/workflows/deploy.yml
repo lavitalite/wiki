@@ -33,8 +33,8 @@ jobs:
         with:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
       - uses: pnpm/action-setup@v3 # Uncomment this block if you're using pnpm
-        with:
-          version: 9 # Not needed if you've set "packageManager" in package.json
+      #  with:
+      #    version: 9 # Not needed if you've set "packageManager" in package.json
       # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -47,10 +47,18 @@ jobs:
         run:   pnpm install # npm ci   / yarn install / bun install
       - name: Build with VitePress
         run:  pnpm docs:build  # or npm run docs:build / yarn docs:build / bun run docs:build
+      - name: Check dist dir location
+        run: |
+          EXPECTED_BUILD_DIR="docs/.vitepress/dist"
+          
+          if [ ! -d "${EXPECTED_BUILD_DIR}" ]; then
+          echo "Error: Build directory ${EXPECTED_BUILD_DIR} does not exist"
+          exit 1
+        fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist
+          path: docs/.vitepress/dist
 
   # Deployment job
   deploy:
