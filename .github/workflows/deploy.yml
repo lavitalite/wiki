@@ -6,7 +6,7 @@ on:
   # Runs on pushes targeting the `main` branch. Change this to `master` if you're
   # using the `master` branch as the default branch.
   push:
-    branches: [v1-vitepress]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,14 +32,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      - uses: pnpm/action-setup@v3 # Uncomment this block if you're using pnpm
-        # with:
+      # - uses: pnpm/action-setup@v3 # Uncomment this block if you're using pnpm
+      #   with:
       #     version: 9 # Not needed if you've set "packageManager" in package.json
       # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
-       - name: Use Node.js lts/*
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
+          cache: pnpm # or pnpm / yarn
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
