@@ -29,7 +29,7 @@ export default {
 
     watch(
       () => router.route.data.relativePath,
-      () => updateHomePageStyle(location.pathname === '/tech-insight/'),
+      () => updateHomePageStyle(location.pathname === '/tech_insight/'),
       { immediate: true },
     )
     },
