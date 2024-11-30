@@ -1,0 +1,3 @@
+- [awesome-vitepress](./vitepress/setup.md) 
+- [efective-shell](./shell.md)
+- [git-flight-rules](./git/flight-rules.md)

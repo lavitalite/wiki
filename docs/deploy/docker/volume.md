@@ -1,0 +1,1 @@
+![](/oss/deploy/types-of-mounts.webp)
