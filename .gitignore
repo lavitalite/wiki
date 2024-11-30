@@ -2,6 +2,7 @@ node_modules
 dist
 cache
 *.env
+vite.config.ts.timestamp-*
 [alias]
     lg:clean = log --oneline --graph --decorate --all
     lg:verbose = log --stat --graph --decorate --all
