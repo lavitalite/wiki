@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.su6J3y5l.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"dev/perf/bundle.md","filePath":"dev/perf/bundle.md","lastUpdated":1732976097000}'),r={name:"dev/perf/bundle.md"};function d(n,o,s,c,p,l){return a(),t("div")}const i=e(r,[["render",d]]);export{_ as __pageData,i as default};

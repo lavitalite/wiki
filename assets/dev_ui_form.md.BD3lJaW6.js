@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.su6J3y5l.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"dev/ui/form.md","filePath":"dev/ui/form.md","lastUpdated":1732976097000}'),r={name:"dev/ui/form.md"};function o(s,c,d,n,i,m){return a(),t("div")}const _=e(r,[["render",o]]);export{p as __pageData,_ as default};
