@@ -1,7 +1,7 @@
 import { type DefaultTheme, defineConfig, type HeadConfig,  } from "vitepress";
 import { metaName } from "./theme/utils/head";
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
-import path from 'node:path'
+import { resolve } from 'node:path'
 
 
 const SITE_URL = "https://blog.xiyuan.cc";
@@ -124,12 +124,9 @@ export default defineConfig({
       groupIconVitePlugin(),
     ],
     resolve: {
-      alias: [
-        {
-          find: '@',
-          replacement: path.resolve(__dirname, "../")
-        }
-      ]
+      alias: {
+        '@/Particles': resolve(__dirname, './theme/components/Particles/index.vue')
+      }
     },
   },
   markdown: {
@@ -172,6 +169,6 @@ export default defineConfig({
     },
   },
   async transformPageData(pageData, { siteConfig }) {
-      console.log(pageData)
+      // console.log(pageData)
   }
 });
