@@ -7,3 +7,4 @@ vite.config.ts.timestamp-*
     lg:clean = log --oneline --graph --decorate --all
     lg:verbose = log --stat --graph --decorate --all
 
+pnpm-lock.yaml
