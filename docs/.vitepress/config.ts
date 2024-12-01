@@ -110,16 +110,16 @@ export default defineConfig({
     ['link', { rel: 'alternate icon', href: `${BASE_PATH}favicon.ico`, type: 'image/png', sizes: '16x16' }],
   ],
   vite: {
-    build: {
+   /*  build: {
       rollupOptions: {
-         // 打包分类
+        //  打包分类
         output: {
-          // chunkFileNames: 'assets/js/[name]-[hash].js',
-          // entryFileNames: 'assets/js/[name]-[hash].js',
-          // assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+          chunkFileNames: 'assets/js/[name]-[hash].js',
+          entryFileNames: 'assets/js/[name]-[hash].js',
+          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
         }
       }
-    },
+    }, */
     plugins: [
       groupIconVitePlugin(),
     ],
