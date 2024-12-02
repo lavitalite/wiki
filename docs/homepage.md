@@ -1,6 +1,6 @@
 ## 欢迎来到 **我的博客**！
 
-![phoilosophy](public/main.png)
+![phoilosophy](/oss/main.png)
 
 ::: tip Ideas Worth Sharing 
 

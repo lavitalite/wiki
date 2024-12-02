@@ -26,7 +26,6 @@ Organic Search
 export const meataName = (name,content) => ['meta', {name, cotent}]
 ```
 
-<<< @/../.vitepress/config.ts{17-19} [.vitepress/config.ts]
 
 :::
 

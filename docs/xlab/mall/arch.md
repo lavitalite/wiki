@@ -67,7 +67,11 @@ admin后台管理
 ## 营销模块
 
 活动列表
+<<<<<<< HEAD
 ```ts [types/Campaign.ts]
+=======
+```ts [types/campaign.ts]
+>>>>>>> c0b92e26c968f3071803735dff5d74461a5245e4
 export interface Campaign {
   id: string;
   title: string;

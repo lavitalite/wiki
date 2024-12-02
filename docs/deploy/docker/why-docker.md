@@ -10,13 +10,12 @@
 
 容器技术出现之前
 
-![](../imgs/why_container_bf.webp){width=50%}
+![](/oss/deploy/why_container_bf.webp){width=50%}
 容器技术出现之后
-![](../imgs/why_container_af.webp){width=50%}
+![](/oss/deploy/why_container_af.webp){width=50%}
 
 容器vs虚拟机
-![](../imgs/container_vs_vm.webp)
-
+![](/oss/deploy/container_vs_vm.webp)
 
 
 Linux Container主要由Namespace 2 和Cgroups 3 两大机制来保证实现
@@ -38,15 +37,14 @@ Cgroups(Control Groups)就负责资源管理控制作用，比如进程组使用
 
 ## 架构
 
-![](../imgs/docker-architecture.webp)
+![](/oss/deploy/docker-architecture.webp)
 
 
 
 ## 参考资料
 
-[^1]: [cgroup is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, etc) of a collection of processes]()
+[^1]: cgroup is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, etc) of a collection of processes
 
 [^2]: [open container](https://opencontainers.org/)
 
 
-[^1]: fastapi

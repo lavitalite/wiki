@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ```ts
 html[data-theme="dark"] {
   color-scheme: dark;
@@ -22,4 +23,8 @@ html[data-theme="light"] {
 html[data-theme="light"] {
   color-scheme: light;
 }
+=======
+```ts
+window.matchMedia("(prefers-color-scheme: dark)").matches&&document.documentElement.classList.add("dark");
+>>>>>>> c0b92e26c968f3071803735dff5d74461a5245e4
 ```

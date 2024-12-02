@@ -1,3 +1,7 @@
+k8s
+docker
+nginx
+
 
 
 ## 虚拟化技术

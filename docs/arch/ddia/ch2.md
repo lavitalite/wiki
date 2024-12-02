@@ -172,8 +172,8 @@ li.selected {
     background-color: var(--color-brand)
 }
 ```
-```js
 
+```js
 var liElements = document.getElmentByTagName('li')
 for(var i=0; i< liElements.length; i++){
     if(liElements[i].classList.contains('selected')){

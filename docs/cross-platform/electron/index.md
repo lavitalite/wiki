@@ -6,7 +6,7 @@ excerpt: I loved the _GitHub Markdown syntax for alerts_ until it [landed in Vit
 ---
 
 ::: info post updated on <time datetime="2024-02-04">4 February 2024</time>
-[Read about the changes](./github-alerts-markdown-syntax.md#updates-to-this-article).
+[Read about the changes]().
 :::
 
 ---

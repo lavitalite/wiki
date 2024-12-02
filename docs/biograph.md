@@ -1,6 +1,4 @@
-<style> :root { --color-primary: #794cff; --col-span: 8; --total-cols: 24; --width-per: calc((var(--col-span) / var(--total-cols)) * 100%) } .row { display: flex; } .col-8 { flex: 0 0 var(--width-per) } .col-10 { --col-span: 10; flex: 0 0 var(--width-per) } .form-item-label { text-align: end; } .goodat { display: inline-flex; align-items: center; color: rgba(0,0,0,.88) } .goodat::after { content: ":"; margin-inline-start: 2px; margin-inline-end: 8px; } .checkbox-wrapper { display: inline-flex; align-items: baseline; } .checkbox{ /* input[type="checkbox"]:chekced { background-color: colro: } */ input[type="checkbox"] { accent-color: var(--color-primary) } } .checkbox + span { white-space: nowrap; } 
-    
-</style>
+
 
 ## 目前感兴趣的技术有
 

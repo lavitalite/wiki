@@ -1,19 +1,21 @@
-### 本地调试
 
-- [x] 全局安装发布上线的脚手架
+## curl
+
+
+
+info curl
+
 ```sh
-npm i -g 4am
+-o /usr/local/bin/docker-compose # to file
+-o- | bash # output to stdout and pipe output to bash
 ```
 
-- [x] 全局卸载上线的脚手架
-```sh
-npm remove -g 4am
-```
+## tldr 
 
-- [x] symlink指向本地项目
+## symlink
 
 
-1. `npm link` in a package folder with no arguments will create a symlink in the global folder {prefix}/lib/node_modules/<package> that links to the package where the npm link command was executed.
+1. `npm link` in a package folder with no arguments will create a symlink in the global folder `{prefix}/lib/node_modules/<package>` that links to the package where the npm link command was executed.
 
 2. it will also link any bins in the package to {prefix}/bin/{name}. Note that npm link uses the global prefix (see npm prefix -g for its value).
 
@@ -29,36 +31,10 @@ quarte -> ../lib/node_modules/@quarte/cli/bin/cli.js
 ```
 
 
-`npm i 4am` 在全局`node/lib/node_modules/<pgk_name>`找到库包(scoped package)
-
-```sh
-➜  cli cd 4am
-➜  4am npm link
-➜  4am ls -la /Users/ayao/.nvm/versions/node/v22.4.1/lib/node_modules/
-4am -> ~/project-clone/cli/4am
-➜  4am
-debug setup
-```
-
-- [x] 分包
-
-- [x] 包的发布上线
-```sh
-npm login
-npm publish
-```
-
-
-- [x] 命令注册
-
-```sh
-vue create
-vue invoke
-```
 
 ### 参数解析
 ```sh
-vue command [options] <params>
+`vue command [options] <params>`
 ```
 - 可选参数
 - 必选参数
@@ -280,7 +256,7 @@ function checkVersion(processVersion, requiredVersion) {
 ```
 
 
-```js title="env.js"
+```js [env.ts]
 //{"os": "darwin", "arch": "arm64"}
 //{"os": "darwin", "arch": "x86_64"}
 

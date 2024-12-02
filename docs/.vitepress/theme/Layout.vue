@@ -2,7 +2,8 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
-import HomePage from './components/HomePage.vue'
+// import HomePage from './components/HomePage.vue'
+import Particles from './components/Particles/index.vue'
 
 const { isDark } = useData()
 
@@ -45,7 +46,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   <!-- eslint-disable-next-line vue/component-name-in-template-casing -->
   <DefaultTheme.Layout>
     <template #home-features-after>
-      <HomePage />
+      <Particles />
     </template>
   </DefaultTheme.Layout>
 </template>

@@ -81,7 +81,7 @@ domain name may not be resolved locally at all.
 ### ip封锁
 使用HTTP代理。客户端不在直接请求目标服务器，而是请求代理服务器，代理服务器在去请求目标服务器。
 对于HTTP代理来说，封锁起来非常简单。因为HTTP协议是明文，Request Message中就带有要请求的URL或IP地址，这样很容易就被检测到。对于HTTPS来说，虽然通信是进行加密了，但是在建连之前会给代理服务器发送CONNECT方法，这里也会带上要访问的远端服务器地址。如果代理服务器在国外，在出去前就会被检测到。 如果代理服务器在国内，呵呵，你也出不去啊。
-```header
+```
 CONNECT: www.google.com
 ```
 
@@ -162,11 +162,11 @@ SYN 是用来请求建立连接（建立套接字）的
 第二次和第![](三次握手.png)，在 S 和 C 端均发送了 ACK，表示双方均回执了对方的建立连接请求。
 </pre>
 
-![](assets/three-way-handshake-1.png)
+![](oss/three-way-handshake-1.png)
 
-![](assets/three-way-handshake-2.png)
+![](oss/three-way-handshake-2.png)
 
-![](assets/three-way-handshake-3.png.png)
+![](oss/three-way-handshake-3.png.png)
 ### 四次挥手
 
 

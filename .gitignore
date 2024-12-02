@@ -6,7 +6,7 @@
 *.local
 *.log
 *.env
-.cache
+cache
 dist
 
 node_modules
