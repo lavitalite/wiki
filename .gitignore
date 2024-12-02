@@ -1,6 +1,18 @@
-node_modules
-dist
+.DS_Store
+.idea
+.output
+
+.temp
+*.local
+*.log
 *.env
+.cache
+dist
+
+node_modules
+.eslintcache
+vite.config.ts.timestamp-*
+
 [alias]
     lg:clean = log --oneline --graph --decorate --all
     lg:verbose = log --stat --graph --decorate --all
