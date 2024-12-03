@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    //  Adds feature support for import.meta and export * as ns from "mod" and top-level await
+    "module": "ESNext",
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./docs/*"],
@@ -9,5 +16,10 @@
   "exclude": [
     "**/dist/**",
     "**/node_modules/**",
+  ],
+  "include": [
+    "**/*.ts", 
+    "**/*.vue",
+    "**/*.d.ts"
   ]
 }

@@ -3,7 +3,9 @@ import { type DefaultTheme, defineConfig, type HeadConfig, } from "vitepress";
 import { metaName } from "./theme/utils/head";
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { resolve } from 'node:path'
+import { transformerTwoslash} from '@shikijs/vitepress-twoslash'
 
+import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs'
 
 const SITE_URL = "https://blog.xiyuan.cc";
 const SITE_TITLE = "XiYuan's Tech Insight";
@@ -142,7 +144,7 @@ export default defineConfig({
       }
     }, */
     plugins: [
-      groupIconVitePlugin(),
+      groupIconVitePlugin() as Plugin,
     ],
     resolve: {
       alias: {
@@ -162,6 +164,11 @@ export default defineConfig({
     config(md) {
       md.use(groupIconMdPlugin)
     },
+    codeTransformers: [
+      transformerTwoslash({
+        typesCache: createFileSystemTypesCache() 
+      })
+    ]
   },
   themeConfig: {
 

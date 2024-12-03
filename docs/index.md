@@ -13,15 +13,9 @@ hero:
     - theme: alt
       text: 关于我
       link: /biograph.md
-<<<<<<< HEAD
-    - theme: brand
-      text: 🎲 LET's ROLL
-      link: /__roll__/
-=======
     - theme: alt
       text: 🎲 Roll The Dice
       link: /_roll/
->>>>>>> c0b92e26c968f3071803735dff5d74461a5245e4
   image:
     src: /logo.svg
     alt: VitePress
@@ -50,12 +44,14 @@ features:
     details: go, larvel, rust, Java, devops, docker和k8s，服务器管理，云计算和数据库和orm
   - icon: ⚡
     title: 跨端开发
-    details: Taro, Uniapp, flutter, electron
+    details: Taro, Uniapp, flutter, electron, h5, 移动端适配
   - icon: 🤖 
     title: 万物皆可AI+
     details: prompt engineer,AI agents, AI ops, LLM微调和开发, AIGC 
   - icon: 🧪
     title: xlab
-    details: IM OMS, CMS + live notebook  
+    details: IM OMS, CMS, + live notebook  
+  - title: 工程化实践
+    details: monorepo, bundle tool, devServer, deps Management
 ---
 

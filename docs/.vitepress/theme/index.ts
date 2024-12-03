@@ -2,8 +2,10 @@
 import DefaultTheme from 'vitepress/theme'
 import Tags from './components/Tags.vue'
 import type { Theme } from 'vitepress'
+// @ts-ignore
 import { h, watch, onMounted } from 'vue'
 import Layout from './Layout.vue'
+import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 // import DateTime from './components/DateTime.vue'
 
 import './rainbow.css'
@@ -11,6 +13,7 @@ import './custom.css'
 import './overwrite.css'
 import 'virtual:group-icons.css'
 
+import '@shikijs/vitepress-twoslash/style.css'
 
 
 
@@ -22,7 +25,7 @@ export default {
   enhanceApp({ app, router }) {
     // app.component('datetime', DateTime)
     app.component('tags', Tags)
-
+    app.use(TwoslashFloatingVue)
 
     if (typeof window === 'undefined')
       return

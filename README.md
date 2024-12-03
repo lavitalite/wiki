@@ -32,3 +32,15 @@ powered by (vitepress)[https://vitepress.dev/]
 > For better CMS experience, This blog has mirgarted to vitepress powered SSG
 > 
 > legacy code can be found at  [v0-mkdocs branch](https://github.com/xiyuan404/tech_insight/tree/v0-mkdocs). 
+
+
+## conventional commit
+
+
+```md
+# [type](scope): (If applied, this commit will ...)[messages](Use the imperative mood)
+
+# Separate subject from body with a blank line
+
+# Use the body to explain to explain why this change is being made
+```
