@@ -34,5 +34,37 @@
     "json",
     "jsonc",
     "yaml"
-  ]
+  ],
+
+   // color theme overwrites
+   "workbench.colorCustomizations": {
+     // -----------------------------------------------------------------------------
+    // Git Status
+    // -----------------------------------------------------------------------------
+    "gitDecoration.conflictingResourceForeground": "#9887eb",
+    "gitDecoration.deletedResourceForeground": "#FF5B82",
+    "gitDecoration.ignoredResourceForeground": "#4f5873",
+    "gitDecoration.modifiedResourceForeground": "#32A7FF",
+    "gitDecoration.untrackedResourceForeground": "#38FFA1",
+   
+    // -----------------------------------------------------------------------------
+    // Menu
+    // -----------------------------------------------------------------------------
+    "menu.background": "#222222",
+    "menu.border": "#191919",
+    "menu.foreground": "#f7f1ff",
+    "menu.selectionForeground": "#fce566",
+    "menu.selectionBackground": "#363537",
+    "menu.separatorBackground": "#363537",
+    // -----------------------------------------------------------------------------
+    // Tabs
+    // -----------------------------------------------------------------------------
+    "tab.activeBackground": "#292A2B", // _background-light
+    "tab.activeForeground": "#19f9d8", // _green 
+    "tab.activeBorder": "#19f9d8", // _green
+    "tab.inactiveBackground": "#242526", // _background-dark
+    "tab.inactiveForeground": "#E6E6E6" //_foreground
+
+  },
+  "window.dialogStyle": "custom"
 }

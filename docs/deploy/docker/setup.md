@@ -1,3 +1,20 @@
+## For windows
+
+### install preferences
+
+install interactively with install wizard
+
+build from source
+
+with package manager
+
+### system requirement
+
+### what is included
+
+
+
+
 ## windows with wsl2
 ### wsl2开发环境搭建
 set up a user name and password for your installed Linux distribution(s),

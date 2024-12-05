@@ -6,6 +6,7 @@ serve virtual file
 ```sh
 rm -rf docs/.vitepress/.temp
 rm -rf docs/.vitepress/.cache
+rm -rf node_modules/.vite
 rm -rf node_modules
 rm -rf pnpm-lock.yaml
 

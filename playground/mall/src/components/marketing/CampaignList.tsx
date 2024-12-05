@@ -40,10 +40,20 @@ export default defineComponent( {
             class="bg-white rouned-lg shadow-sm hover:shadow-md transition-shadow p-4 cursor-pointer"
           > 
             <div
-             
+              class="flex justify-between items-start "
             >
+              <div
+              >
+                <h3 class="text-lg font-semibold text-gray-900">{campaign.name}</h3>
+                <p class="text-sm text-gray-500 mt-1">{campaign.description}</p>
+              </div>
+              <span
+                class={['px-3 py-1 rounded-full text-xs font-medium', getStatusColor(campaign.status)]}
+              >
+                  {campaign.status}
+              </span>
           </div>
-        })}
+        })
       </div>
     }
   }

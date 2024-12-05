@@ -33,6 +33,7 @@ features:
       canvas,svgwebgl地图可视化，数据可视化和3d可视化
       web3
       websocket即时通讯
+      大数据
   - icon: 🧩
     title: 懂产品的技术
     details: B端企业服务产品
@@ -41,17 +42,18 @@ features:
     details: work-life balance, 我的精神世界
   - icon: 🧠
     title: 全栈练习生
-    details: go, larvel, rust, Java, devops, docker和k8s，服务器管理，云计算和数据库和orm
+    details: go, larvel, rust, Java,服务器管理，数据库和orm
   - icon: ⚡
     title: 跨端开发
-    details: Taro, Uniapp, flutter, electron, h5, 移动端适配
+    details: Taro, Uniapp, flutter, electron, h5,小游戏和小程序 移动端适配
   - icon: 🤖 
     title: 万物皆可AI+
-    details: prompt engineer,AI agents, AI ops, LLM微调和开发, AIGC 
+    details: prompt engineer,AI agents, AI ops, LLM微调和开发, AIGC, code assistant 
   - icon: 🧪
     title: xlab
     details: IM OMS, CMS, + live notebook  
-  - title: 工程化实践
-    details: monorepo, bundle tool, devServer, deps Management
+  - title: 工程化实践,云原生,分布式，devops, docker和k8s
+    icon: ⚙️
+    details: monorepo + packages & git submodule, bundle tool, devServer, deps Management
 ---
 

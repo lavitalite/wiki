@@ -1,3 +1,14 @@
+## color theme and icon theme
+
+beared 
+ayu
+catppuccin
+pandia
+
+## language intellisense
+
+tab completion & auto-suggestion
+
 - [ ] show all commands
 
 ```json
