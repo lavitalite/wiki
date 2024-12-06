@@ -1,5 +1,14 @@
-<<<<<<< HEAD
 ```ts
+:root,
+:root[data-theme=dark] {
+
+  --theme-c-bg-depth-1: #FFFFFF;
+  --theme-c-bg-depth-2: #FAFAFA;
+  --theme-c-bg-depth-3: #E5E5E5;
+  --theme-c-bg-depth-4: #1717170d;
+}
+
+
 html[data-theme="dark"] {
   color-scheme: dark;
 }
@@ -23,8 +32,6 @@ html[data-theme="light"] {
 html[data-theme="light"] {
   color-scheme: light;
 }
-=======
 ```ts
 window.matchMedia("(prefers-color-scheme: dark)").matches&&document.documentElement.classList.add("dark");
->>>>>>> c0b92e26c968f3071803735dff5d74461a5245e4
 ```

@@ -5,6 +5,7 @@ import {  CampaignRewardType, CampaignRuleType, CampaignStatus, CampaignType } f
 import type { Campaign, CampaignReward, CampaignRule, TargetAuidence } from '@/types/marketing';
 import {faker} from '@faker-js/faker/locale/zh_CN'
 import { addDays } from '../format/date';
+import { ShuffleService } from '../rand/shuffle';
 
 const CampaignTypes = Object.values(CampaignType)
 const ruleTypes = Object.values(CampaignRuleType)
@@ -15,31 +16,64 @@ const status = Object.values(CampaignStatus)
 
 
 // 促销活动名称模板
-const CAMAPIGN_NAME_TEMPLATES = [
+const CAMPAIGN_NAME_TEMPLATES = [
   '${season}${holdiay}${action}',
   '${occasion}专项${benefit}',
-  '${product}${action}${benefit}'
+  '${cateogry}${action}${benefit}'
 ]
 
 const SEASONS = ['春季', '夏季', '秋季', '冬季', '年中', '年末']
 const HOLIDAYS = ['春节', '中秋', '国庆', '双11', '618', '圣诞']
 const OCCASIONS = ['会员', '新人', '周年庆', '开业']
 const BENFITS = ['折扣', '立减', '返现', '狂欢', '钜惠']
-const PRODUCTS = ['全场', '新品', '精选','热销' ]
+const CATEGORIES = ['全场', '新品', '精选','热销' ]
 
 
 export class CampaignFactory {
-  private static shuffle<T>(arr: T[]):T[] {
-    const newArr = [...arr]
-    for(let i = newArr.length -1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      [newArr[i], newArr[j]] = [newArr[j], newArr[i]]
+  private static generateCampaignName(): string {
+    const template = ShuffleService.pickOne(CAMPAIGN_NAME_TEMPLATES)
+    return template
+      .replace('${season}', ShuffleService.pickOne(SEASONS))
+      .replace('${holiday}', ShuffleService.pickOne(HOLIDAYS))
+      .replace('${occasion}', ShuffleService.pickOne(OCCASIONS))
+      .replace('${category}', ShuffleService.pickOne(CATEGORIES))
+      .replace('${benefit}', ShuffleService.pickOne(BENFITS))
+  }
+
+  private static generateDescription(type: CampaignType, name:string): string {
+    const descriptions = {
+      [CampaignType.FLASH_SALE]: [
+        '限时抢购，错过不再',
+        '24小时限时特卖',
+        '闪购特惠，先到先得'
+      ],
+      [CampaignType.DISCOUNT]: [
+        '全场商品限时折扣',
+        '限时折扣，最高减免'
+      ],
+      [CampaignType.BUNDLE]: [
+        '超值套装优惠',
+        '搭配购特惠'
+      ],
+      [CampaignType.GROUP_BY]: [
+        '拼团优惠，一起省',
+        '团购特价，邀请好友享优惠'
+      ],
+      [CampaignType.LIMITED_TIME]: [
+        '限时特惠活动',
+        '特定时段专享优惠'
+      ],
+      [CampaignType.NEW_USER]: [
+        '新客专享优惠',
+        '首单特惠'
+      ]
     }
-    return newArr
+    return ShuffleService.pickOne(descriptions[type])
   }
 
   static createRule(): CampaignRule {
-    const type = faker.helpers.arrayElement(ruleTypes)
+    const type = ShuffleService.pickOne(ruleTypes)
+    
 
     return {
       id: faker.string.uuid(),
