@@ -24,6 +24,13 @@ By Developer, for Developer
 ## Features
 powered by (vitepress)[https://vitepress.dev/]
 
+
+## 🙏 Acknowledgements
+
+OpenHands is built by a large number of contributors, and every contribution is greatly appreciated! We also build upon other open source projects, and we are deeply thankful for their work.
+
+For a list of open source projects and licenses used in OpenHands, please see our CREDITS.md file.
+
 ## Changelog
 
 > [!NOTE]

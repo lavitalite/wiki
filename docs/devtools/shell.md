@@ -9,3 +9,4 @@ effect-shell
 `cp -r /mnt/c/Users/34476/.ssh/* ~/.ssh/`
 
 
+回显写入文件内容

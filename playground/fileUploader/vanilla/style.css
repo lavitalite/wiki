@@ -1,0 +1,142 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #242424;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --x-space-medium: 2rem;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#app {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+
+content-body>*+* {
+  margin-top: var(--x-space-medium);
+}
+
+
+
+[class*="x-"] {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  overflow-clip-margin: unset;
+  scroll-margin-top: unset;
+  scroll-margin-right: unset;
+  scroll-margin-bottom: unset;
+  scroll-margin-left: unset;
+  outline-color: unset;
+  outline-style: unset;
+  outline-width: unset;
+  outline-offset: unset;
+  padding-top: unset;
+  padding-right: unset;
+  padding-bottom: unset;
+  padding-left: unset;
+  scroll-padding-top: unset;
+  scroll-padding-right: unset;
+  scroll-padding-bottom: unset;
+  scroll-padding-left: unset;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.docs-main {
+  display: flex;
+}
+.docs-sidebar {
+  flex-shrink: 0;
+  width: 500px;
+}
+.docs-content {
+  max-width: 80rem;
+  flex-grow: 1;
+  padding-inline: 3rem;
+  padding-block-end: 3rem;
+}
+
+.docs-content-body {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  place-items: center;
+}
+
+.docs-toc {
+  --time-medium: 0;
+  display: none;
+  transition: right var(--time-medium) ease;
+}
+@media (min-width: 1280px) {
+  .docs-toc {
+    display: block;
+    width: 16rem;
+    flex-shrink: 0;
+    position: relative;
+    right: 0;
+  }
+}

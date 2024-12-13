@@ -52,8 +52,14 @@ features:
   - icon: 🧪
     title: xlab
     details: IM OMS, CMS, + live notebook  
-  - title: 工程化实践,云原生,分布式，devops, docker和k8s
+  - title: 工程化实践,云原生,分布式，devops, docker和k8s, build-tool-chain
     icon: ⚙️
     details: monorepo + packages & git submodule, bundle tool, devServer, deps Management
+  - title: BI business intelligence 
+    details: 工作台,dashboard，数据大屏, data analysis to gain business insights
+    icon:
+  - title: etc
+    details: 多维表格，电子合同，权限控制和 oauth,SSO login, 视频会议，短视频和直播,基于大模型的开源知识库问答系统, 法大大，腾讯电子签,万维广告
+
 ---
 

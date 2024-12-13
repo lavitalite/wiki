@@ -8,6 +8,7 @@
 *.env
 cache
 dist
+x-*/
 
 node_modules
 .eslintcache

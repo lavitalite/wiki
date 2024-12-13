@@ -22,5 +22,5 @@
     "**/*.ts", 
     "**/*.vue",
     "**/*.d.ts"
-  ]
+, "playground/fileUploader/vanilla/components/fileUploader.js", "playground/fileUploader/vanilla/utils/constants.js", "playground/fileUploader/vanilla/utils/fileUtils.js"  ]
 }
