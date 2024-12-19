@@ -35,8 +35,8 @@ features:
       websocket即时通讯
       大数据
   - icon: 🧩
-    title: 懂产品的技术
-    details: B端企业服务产品
+    title: 应用架构
+    details: B端企业服务产品，serveless(google cloud function + firebase + netlify)
   - icon: 🍵
     title: 碎碎念
     details: work-life balance, 我的精神世界
@@ -60,6 +60,12 @@ features:
     icon:
   - title: etc
     details: 多维表格，电子合同，权限控制和 oauth,SSO login, 视频会议，短视频和直播,基于大模型的开源知识库问答系统, 法大大，腾讯电子签,万维广告
+  - title: 开发者变现
+    details: 
+  - title: 产品灵感
+    detials: 
+  - title: productivity lab
+    detials:
 
 ---
 

@@ -8,6 +8,7 @@ const downloadFile(filename,content){
     aLink.download = filename
     aLink.href = URL.createObjectURL(blob)
     aLink.dispatchEvent(evt)
+  	// a.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true, view: window}))
 }
 
 ```

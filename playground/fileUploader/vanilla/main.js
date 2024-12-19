@@ -1,7 +1,7 @@
 import './style.css'
 import './styles/fileUploader.css'
 import './utils/svg-symbol-register.js'
-import {FileUploader} from './components/fileUploader.js'
+import {FileUploader} from './components/file-upload.js'
 
 const uploader = new FileUploader({
   container: document.querySelector('.docs-content-body'),

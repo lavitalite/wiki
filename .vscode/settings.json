@@ -32,20 +32,40 @@
     "html",
     "markdown",
     "json",
-    "jsonc",
     "yaml"
   ],
 
-   // color theme overwrites
+// -----------------------------------------------------------------------------
+// Editor & Inergrated Terminal Font Customization
+// -----------------------------------------------------------------------------
+  "editor.fontFamily": " 'Monasapce Argon', 'Fira Code' ", // Humanist sans
+  "editor.fontWeight": "500", // semibold
+  "editor.fontLigatures": false,
+  "terminal.integrated.fontFamily": " 'Monaspace Krypton', 'JetBrainsMono Nerd Font' ",
+  "terminal.integrated.fontLigatures": true,
+  "[markdown]": {
+    "editor.fontFamily": "Monasapce Radon" // handwriting
+  },
+  "[yaml]": {
+    "editor.fontFamily": "Monaspace Krypton" // mechanical
+  },
+  "[json]": {
+    "editor.fontFamily": "Monaspace Krypton" // mechanical
+  },
+
+
+// -----------------------------------------------------------------------------
+// Color Theme Overwrites
+// -----------------------------------------------------------------------------
    "workbench.colorCustomizations": {
      // -----------------------------------------------------------------------------
-    // Git Status
+    // Git Status for dark theme
     // -----------------------------------------------------------------------------
-    "gitDecoration.conflictingResourceForeground": "#9887eb",
-    "gitDecoration.deletedResourceForeground": "#FF5B82",
-    "gitDecoration.ignoredResourceForeground": "#4f5873",
-    "gitDecoration.modifiedResourceForeground": "#32A7FF",
-    "gitDecoration.untrackedResourceForeground": "#38FFA1",
+    // "gitDecoration.conflictingResourceForeground": "#9887eb",
+    // "gitDecoration.deletedResourceForeground": "#FF5B82",
+    // "gitDecoration.ignoredResourceForeground": "#4f5873",
+    // "gitDecoration.modifiedResourceForeground": "#32A7FF",
+    // "gitDecoration.untrackedResourceForeground": "#38ffa2",
    
     // -----------------------------------------------------------------------------
     // Menu
@@ -59,12 +79,11 @@
     // -----------------------------------------------------------------------------
     // Tabs
     // -----------------------------------------------------------------------------
-    "tab.activeBackground": "#292A2B", // _background-light
-    "tab.activeForeground": "#19f9d8", // _green 
-    "tab.activeBorder": "#19f9d8", // _green
-    "tab.inactiveBackground": "#242526", // _background-dark
-    "tab.inactiveForeground": "#E6E6E6" //_foreground
+    // "tab.activeBackground": "#292A2B", // _background-light
+    // "tab.activeForeground": "#19f9d8", // _green 
+    // "tab.activeBorder": "#19f9d8", // _green
+    // "tab.inactiveBackground": "#242526", // _background-dark
+    // "tab.inactiveForeground": "#E6E6E6" //_foreground
 
   },
-  "window.dialogStyle": "custom"
 }

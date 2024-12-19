@@ -168,3 +168,104 @@ crossbow {
 ```
 
 justify-content: fallback to `flex-start` if not specific
+
+
+## file download
+
+
+
+Stream-like Processing:
+
+- Uses ReadableStream for efficient memory handling
+- Processes data in chunks rather than loading entire file
+
+
+
+Progress Tracking:
+- Monitors download progress
+- Reports loaded bytes and total size
+- Supports percentage calculations
+
+
+
+## Streams API
+
+### Readable streams 可读流
+
+**Readable streams** is a data source represented in JavaScript by a `ReadableStream` object 
+
+
+There are two types of underlying sources:
+
+- **Push sources** constantly push data at you when you've accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/Web sockets.
+
+推送源在您访问时会不断向您推送数据，您可以开始、暂停或取消对流的访问。示例包括视频流和 TCP/Web 套接字。
+
+- **Pull sources** require you to explicitly request data from them once connected to. Examples include a file access operation via a fetch() request.
+
+拉取源要求您在连接到后明确请求它们的数据。示例包括通过 fetch（） 请求进行的文件访问操作
+
+
+###  controllers
+
+close it if wished
+
+### Locking 锁定
+Only one reader can read a stream at a time;
+no other reader may read this stream until this reader is released
+
+### pipechind and backpressure
+
+
+
+
+
+## Fetch API  
+
+
+**Interface**
+  - Window.fetch() and WorkerGlobalScope.fetch()
+  - Headers
+  - Response
+  - Request
+
+
+## signature
+
+```
+fetch(resource)
+fetch(resource, options)
+```
+**Parameters**
+
+- resources: `Request` object or string url
+- options: `RequestInit` object
+  
+**Return value**
+- A `Promise` that resolves to a `Response` object
+
+### consuming chunk
+
+
+ - aborting consuming
+
+```ts
+const aborter = new AbortController()
+
+const logChunk('https://api.themoviedb.org/3/movie/11', {signal: aborter.signal}) 
+
+async function logChunk(url, {signal}){
+  const response = await fetch(url, {signal})
+
+  try{
+    for await (const chunk of response.body){
+      if(signal.aborted)  throw signal.reason;
+    }
+  } catch(e) {
+    if(e instanceof TypeError) {
+      
+    }
+  }
+}
+```
+
