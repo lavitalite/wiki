@@ -121,7 +121,7 @@ export default defineConfig({
   cleanUrls: true,
   // srcDir: 'docs',
   base: BASE_PATH,
-  // outDir: './dist',
+  outDir: './dist',
   // srcExclude: ["oss"],
   lastUpdated:true,
   head: [

@@ -1,0 +1,8 @@
+packages:
+  - "playground/*"
+catalog:
+    "@eslint/js": "^9.17.0"
+    eslint: "^9.17.0"
+    typescript: "~5.6.2"
+    typescript-eslint: "^8.18.1"
+    "@types/node": "^22.10.1"

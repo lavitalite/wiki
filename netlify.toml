@@ -1,0 +1,12 @@
+[build]
+publish = "docs/dist"
+command = "pnpm run deploy"
+
+
+[build.environment]
+NODE_VERSION = "20"
+
+[[redirects]]
+from = "playground/*"
+to = "/playground/index.html"
+status = 200

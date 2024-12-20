@@ -87,3 +87,25 @@ export PATH=$N_PREFIX/bin:$PATH
 npm list --global
 npm uninstall --global *
 ```
+
+
+
+## npm install dir
+
+now global packages and bin install dir is set as following:
+
+npm install dir: `$npm_config_prefix=$HOME/n`
+
+pakcages will be install to `$npm_config_prefix/lib/node_modules`
+
+bins to `$npm_config_prefix/bin`
+
+
+## npm pakcage linking
+
+
+1. link to global step:
+  `npm link` create a symlink in the global pkg folder`$npm_config_prefix/lib/node_modules/<package>`
+
+2. link from global step:
+  `npm link <package>` create a symlink from global installed package to `node_modules` of current folder

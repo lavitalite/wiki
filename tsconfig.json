@@ -9,8 +9,7 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./docs/*"],
-      "/": ["docs"]
+      "@playground/file-download": ["./playground/file-donwload/index.ts"]
     }
   },
   "exclude": [
