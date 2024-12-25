@@ -1,3 +1,19 @@
+## search filter
+
+`@recommended `
+
+`@installed  snippet`
+
+`@category:"snippets" markdown`
+
+
+## debug
+
+**Inspect Editor Tokens and Scopes**
+Developer: Inspect Editor Tokens and Scopes
+![](@oss/inspect-editor-token-and-scope.png)
+
+
 ## color theme and icon theme
 
 beared 

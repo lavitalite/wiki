@@ -1,0 +1,13 @@
+{
+  "name": "@xiyuan/interactive",
+  "type": "module",
+ "private": "true",
+ "scripts": {
+  "dev": "vite  --open --logLevel warn  --clearScreen",
+  "build": "vite build",
+  "update-post": "vite build",
+  "serve": "vite preview"
+},
+"dependencies": {
+  }
+}

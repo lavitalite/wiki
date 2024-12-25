@@ -1,7 +1,15 @@
 {
+
+  // -----------------------------------------------------------------------------
+  // Foramt Code: 
+  // -----------------------------------------------------------------------------
   // Disable the default formatter, use eslint instead
+
   "prettier.enable": false,
   "editor.formatOnSave": false,
+  "editor.formatOnPaste": true,
+
+
 
   // Auto fix
   "editor.codeActionsOnSave": {
@@ -9,6 +17,8 @@
     "source.organizeImports": "never"
   },
 
+
+  
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off" },
@@ -30,10 +40,16 @@
     "typescriptreact",
     "vue",
     "html",
-    "markdown",
-    "json",
-    "yaml"
   ],
+// -----------------------------------------------------------------------------
+// IntelliSense: auto-suggestion and completion
+// -----------------------------------------------------------------
+
+"editor.acceptSuggestionOnEnter": "off",
+"editor.tabCompletion": "on",
+"editor.snippetSuggestions": "top",
+"editor.suggestSelection": "first",
+"editor.wordBasedSuggestions": "matchingDocuments",
 
 // -----------------------------------------------------------------------------
 // Editor & Inergrated Terminal Font Customization
@@ -43,8 +59,16 @@
   "editor.fontLigatures": false,
   "terminal.integrated.fontFamily": " 'Monaspace Krypton', 'JetBrainsMono Nerd Font' ",
   "terminal.integrated.fontLigatures": true,
+  "terminal.external.windowsExec": "E:\\tools\\Tabby\\Tabby.exe",
   "[markdown]": {
-    "editor.fontFamily": "Monasapce Radon" // handwriting
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.fontFamily": "Monasapce Radon", // handwriting
+    "editor.renderWhitespace": "all",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "on",
+      "strings": "on"
+    }
   },
   "[yaml]": {
     "editor.fontFamily": "Monaspace Krypton" // mechanical
@@ -52,6 +76,33 @@
   "[json]": {
     "editor.fontFamily": "Monaspace Krypton" // mechanical
   },
+
+// -----------------------------------------------------------------------------
+// Typescript config
+// https://code.visualstudio.com/docs/editor/variables-reference
+// -----------------------------------------------------------------
+
+  "typescript.validate.enable": true,
+  "typescript.tsdk": "${workspaceFolder}/node_modules/typescript/lib",
+  "typescript.tsserver.path": "${workspaceFolder}/node_modules/typescript/lib/tsserver.js",
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.tsserver.log": "verbose",
+
+// -----------------------------------------------------------------------------
+// markdown & emmetconfig
+// https://code.visualstudio.com/docs/editor/variables-reference
+// -----------------------------------------------------------------
+"emmet.includeLanguages": {
+  "vue-html": "html",
+  "javascript": "javascriptreact",
+  "markdown": "html",
+  "plaintext": "pug",
+    "postcss": "css"
+},
+"emmet.showSuggestionsAsSnippets": true,
+"emmet.showExpandedAbbreviation": "never",
+
 
 
 // -----------------------------------------------------------------------------
@@ -86,4 +137,16 @@
     // "tab.inactiveForeground": "#E6E6E6" //_foreground
 
   },
+  "editor.tokenColorCustomizations": {
+    "[Ayu Light]": {
+      "textMateRules": [
+        {
+          "scope": "markup.inline.raw.string.markdown",
+          "settings": {
+            "foreground": "#aaff00", 
+          }
+        }
+      ]
+    }
+  }
 }

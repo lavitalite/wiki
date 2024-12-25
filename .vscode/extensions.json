@@ -1,0 +1,20 @@
+/*
+Where are extensions installed?
+    Windows %USERPROFILE%\.vscode\extensions
+    macOS ~/.vscode/extensions
+    Linux ~/.vscode/extensions
+*/
+
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    // markdown
+    "darkriszty.markdown-table-prettify",
+    "gera2ld.markmap-vscode",
+    "takumii.markdowntable",
+    "kisstkondoros.vscode-gutter-preview",
+    "bierner.markdown-preview-github-styles",
+    "bierner.github-markdown-preview"
+  ]
+}

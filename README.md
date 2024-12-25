@@ -21,17 +21,25 @@ By Developer, for Developer
 <br>
 
 
-## Features
-powered by (vitepress)[https://vitepress.dev/]
+## ✨ Features
 
 
-## 🙏 Acknowledgements
+- **[Mono repo]** - 
+- **[Multi-Framework]** - vue, react
+- ⚡️ **[Fast][Vite]** - instant reloading powered by [Vite]
 
-OpenHands is built by a large number of contributors, and every contribution is greatly appreciated! We also build upon other open source projects, and we are deeply thankful for their work.
 
-For a list of open source projects and licenses used in OpenHands, please see our CREDITS.md file.
+
+
 
 ## Changelog
+
+
+| Version | Supported          | Status  |  Desc   |
+| ------- | :----------------- | ------- | --- |
+| 0.2     | :white_check_mark: | wip     |  In consider using  iles |
+| 0.1     | :x:                | active  |     |
+| < 0.1   | :x:                | archive |     |
 
 > [!NOTE]
 > You are viewing the **v1-vitepress branch**,
@@ -51,3 +59,10 @@ For a list of open source projects and licenses used in OpenHands, please see ou
 
 # Use the body to explain to explain why this change is being made
 ```
+
+
+## 🙏 Acknowledgements
+
+build upon other open source projects, and we are deeply thankful for their work.
+
+For a full list of open source projects and licenses used in this project, please see our `CREDITS.md` file.

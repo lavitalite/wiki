@@ -22,7 +22,7 @@ hero:
 features:
   - icon: 🚀
     title: 设计观察和产品复刻
-    details: 重复造轮子，大厂技术团队的博客，产品和工具的开源竞品，awesome framework or library中的编码思想和风格，项目完整落地过程，一切让我感兴趣的东西,
+    details: 大厂技术团队的博客，产品和工具的开源竞品，innovative companies，awesome prodcuts, 项目完整落地过程，一切让我感兴趣的东西,
   - icon: 🛠️
     title: 工欲善其事必先利其器
     details: 磨刀不误砍柴工，我喜欢一切让提高我开发体验的东西，DX(boost my developer experience)
@@ -47,13 +47,13 @@ features:
     title: 跨端开发
     details: Taro, Uniapp, flutter, electron, h5,小游戏和小程序 移动端适配
   - icon: 🤖 
-    title: 万物皆可AI+
-    details: prompt engineer,AI agents, AI ops, LLM微调和开发, AIGC, code assistant 
+    title: AI降临
+    details: prompt engineer,AI agents, LLMs微调和开发, AIGC, code assistant，AI automation/RAGS 
   - icon: 🧪
     title: xlab
     details: IM OMS, CMS, + live notebook  
-  - title: 工程化实践,云原生,分布式，devops, docker和k8s, build-tool-chain
-    icon: ⚙️
+  -  icon: ⚙️
+     title: 工程化实践,云原生,分布式，devops, docker和k8s, build-tool-chain, devops, ITops, SecOps
     details: monorepo + packages & git submodule, bundle tool, devServer, deps Management
   - title: BI business intelligence 
     details: 工作台,dashboard，数据大屏, data analysis to gain business insights

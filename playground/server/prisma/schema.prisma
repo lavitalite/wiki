@@ -1,0 +1,21 @@
+
+
+generator client {
+  provider = "prismae-client-js"
+}
+
+
+datasource db {
+  provider = "mysql"
+  url = env("DATABASE_URL")
+}
+
+
+model Embed {
+  id String @id @default(uuid())
+  type String
+  aspect String
+  src String
+  title String
+  createdAt DateTime @default(now())
+}

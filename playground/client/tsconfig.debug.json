@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "pretty": true,
+    "listFiles": true,
+    "generateTrace": true,
+    "explainFiles": true 
+  }
+}

@@ -5,11 +5,12 @@
     //  Adds feature support for import.meta and export * as ns from "mod" and top-level await
     "module": "ESNext",
     "target": "ES2020",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@playground/file-download": ["./playground/file-donwload/index.ts"]
+      "@oss/*": ["docs/oss/*"],
+      "@playground/file-download": ["packages/file-donwload/index.ts"]
     }
   },
   "exclude": [
@@ -21,5 +22,5 @@
     "**/*.ts", 
     "**/*.vue",
     "**/*.d.ts"
-, "playground/fileUploader/vanilla/components/file-upload.js", "playground/fileUploader/vanilla/utils/constants.js", "playground/fileUploader/vanilla/utils/fileUtils.js"  ]
+, "packages/fileUploader/vanilla/components/file-upload.js", "packages/fileUploader/vanilla/utils/constants.js", "packages/fileUploader/vanilla/utils/fileUtils.js", "playground/client/src/App.tsx", "playground/client/postcss.config.cjs", "playground/client/tailwind.config.js"  ]
 }
