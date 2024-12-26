@@ -5,6 +5,7 @@
     //  Adds feature support for import.meta and export * as ns from "mod" and top-level await
     "module": "ESNext",
     "target": "ES2020",
+    // config file upward search
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "baseUrl": ".",

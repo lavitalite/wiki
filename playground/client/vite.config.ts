@@ -1,5 +1,5 @@
 
-// import vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue'
 import react from '@vitejs/plugin-react'
 import SimpleGit from 'simple-git'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -19,49 +19,49 @@ import {resolve} from 'node:path'
 
 
 // with type safety config
-export default defineConfig({
-  
-  base: '/play/',
-  resolve: {
-    // alias,
-  },
-  logLevel: 'info',
-  clearScreen: false,
-  // define: {
-  //   __SHA__: JSON.stringify(SHA),
-  //   __LASTEST_TAG__: JSON.stringify(LASTEST_TAG),
-  //   __LASTEST_TAG_SHA__: JSON.stringify(LASTEST_TAG_SHA),
-  // },
-  plugins: [
-    // vue(),
-    react(),
-    Components({
-      dirs: [
-        'src/components',
-        // '../packages/inspector/client/components',
-      ],
-      dts: 'src/components.d.ts',
-    }),
-    AutoImport({
-      imports: [
-        // 'vue',
-        // '@vueuse/core',
-        'react',
-        'react-router-dom',
-      ],
-      dirs: [
-        // 'src/composables',
-        'src/hooks'
-      ],
-      vueTemplate: true,
-      dts: 'src/auto-imports.d.ts',
-    }),
-  ],
-  optimizeDeps: {
+export default defineConfig(({mode})=>(
+  {
+
+    base: '/play/',
+    resolve: {
+      // alias,
+    },
+    clearScreen: false,
+    // define: {
+    //   __SHA__: JSON.stringify(SHA),
+    //   __LASTEST_TAG__: JSON.stringify(LASTEST_TAG),
+    //   __LASTEST_TAG_SHA__: JSON.stringify(LASTEST_TAG_SHA),
+    // },
+    plugins: [
+      mode === 'react' ? react(): vue(),
+      Components({
+        dirs: [
+          'src/components',
+          // '../packages/inspector/client/components',
+        ],
+        dts: 'src/components.d.ts',
+      }),
+      AutoImport({
+        imports: [
+          // 'vue',
+          // '@vueuse/core',
+          'react',
+          'react-router-dom',
+        ],
+        dirs: [
+          // 'src/composables',
+          'src/hooks'
+        ],
+        vueTemplate: true,
+        dts: 'src/auto-imports.d.ts',
+      }),
+    ],
+    optimizeDeps: {
       exclude: []
-  },
-  build: {
-    outDir: '../docs/dist/play',
-    emptyOutDir: true,
-  },
-})
+    },
+    build: {
+      outDir: '../docs/dist/play',
+      emptyOutDir: true,
+    },
+  }
+))

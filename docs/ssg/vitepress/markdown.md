@@ -135,7 +135,7 @@ export default {
 :::
 
 
-### markdown injection
+### markdown  file injection/inclusion
 
 
 include a markdown file in another markdown file

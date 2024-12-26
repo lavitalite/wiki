@@ -3,10 +3,12 @@
   "type": "module",
  "private": "true",
  "scripts": {
-  "dev": "vite  --open --logLevel warn  --clearScreen",
-  "build": "vite build",
-  "update-post": "vite build",
-  "serve": "vite preview"
+  "dev:react": "vite --mode react",
+  "dev:vue": "vite --mode vue",
+  "build:react": "FRAMEWORK=react tsc && vite build",
+  "build:vue": "FRAMEWORK=vue vue-tsc && vite build",
+  "preview": "vite preview",
+  "test": "vitest"
 },
 "dependencies": {
   }

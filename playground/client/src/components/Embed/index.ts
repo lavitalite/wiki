@@ -1,4 +1,4 @@
-import {BEmbed} from './BEmbed.vue'
+import BEmbed from './BEmbed.vue'
 import type {App} from 'vue'
 
 export {
