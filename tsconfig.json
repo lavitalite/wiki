@@ -14,14 +14,15 @@
       "@playground/file-download": ["packages/file-donwload/index.ts"]
     }
   },
-  "exclude": [
-    "**/dist/**",
-    "**/node_modules/**",
-    "**/playgorund/**"
-  ],
+  
   "include": [
     "**/*.ts", 
     "**/*.vue",
     "**/*.d.ts"
-, "packages/fileUploader/vanilla/components/file-upload.js", "packages/fileUploader/vanilla/utils/constants.js", "packages/fileUploader/vanilla/utils/fileUtils.js", "playground/client/src/App.tsx", "playground/client/postcss.config.cjs", "playground/client/tailwind.config.js"  ]
+  ],
+  "exclude": [
+    "dist/**",
+    "node_modules/**",
+    "playgorund/**"
+  ],
 }

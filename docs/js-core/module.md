@@ -12,7 +12,27 @@ bundle multi files into one file or use multi tags in HTML to load those file in
 js spec dclares that any js file
 a file without any top-level import or export declarations is treated as a scrip and not a module.
 
+ import './mod', if it implemented the same logic as node, we’d have to download: mod.js, mod.cjs, mod.mjs, mod/index.js, 
 
+## Type-Only imports and Exports
+
+transiple pipleline
+
+
+## module specifier 
+
+ bare specifiers (module specifiers that don’t begin with `./`, `../`, or `/`) 
+like `mod/submod` isn't relative or abosoulte or have a file extension. 
+you have to setup import map
+
+
+## module  Resolution 
+
+[--moduleResolution bundler (formerly known as hybrid](https://github.com/microsoft/TypeScript/pull/51669)
+
+treats bare module specifiers, looks up in node_modules subdirectories
+node_modules/@types
+package.json "imports" field lookups 
 
 
 ## on-demand import

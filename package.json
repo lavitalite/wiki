@@ -16,17 +16,21 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+  
+    "vite": "catalog:",
+    "unplugin-auto-import": "^0.19.0",
+    "unplugin-vue-components": "^0.28.0",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "@vitejs/plugin-react": "catalog:",
-    "vite": "catalog:",
+    
+
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "catalog:",
     "vite-plugin-inspect": "catalog:",
     "@shikijs/vitepress-twoslash": "catalog:",
     "@mdit-vue/shared": "catalog:",
-      "unplugin-auto-import": "^0.19.0",
-    "unplugin-vue-components": "^0.28.0",
+    "markdown-it-mermaid": "catalog:",
 
 
     "crawlee": "catalog:",

@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    // "emitDeclarationOnly": true,
+    "resolvePackageJsonImports": true,
+    "resolvePackageJsonExports": true,
+    "allowImportingTsExtensions": true,
+  },
+  "exclude": ["cache", "dist"]
+}

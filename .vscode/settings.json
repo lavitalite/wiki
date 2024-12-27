@@ -81,13 +81,19 @@
 // Typescript config
 // https://code.visualstudio.com/docs/editor/variables-reference
 // -----------------------------------------------------------------
+  "[typescript]": {
+    // @lang:typescript
+    "files.autoSave": "onFocusChange",
 
+  },
   "typescript.validate.enable": true,
-  "typescript.tsdk": "${workspaceFolder}/node_modules/typescript/lib",
-  "typescript.tsserver.path": "${workspaceFolder}/node_modules/typescript/lib/tsserver.js",
-  "javascript.suggest.autoImports": true,
-  "typescript.suggest.autoImports": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.tsserver.path": "${workspaceFolder}/node_modules/.pnpm/typescript@5.6.3/lib/tsserver.js",
   "typescript.tsserver.log": "verbose",
+  "typescript.preferences.importModuleSpecifier": "non-relative" ,
+  //  - auto: Use project settings to select a default.
+  "typescript.preferences.importModuleSpecifierEnding": "auto",
+  "typescript.suggest.autoImports": true,
 
 // -----------------------------------------------------------------------------
 // markdown & emmetconfig

@@ -1,0 +1,10 @@
+{
+  "name": "docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs": "vitepress dev",
+    "docs-build": "vitepress build",
+    "docs-serve": "vitepress serve"
+  }
+}

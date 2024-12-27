@@ -3,6 +3,7 @@ import { type DefaultTheme, defineConfig, type HeadConfig, } from "vitepress";
 import { metaName } from "./theme/utils/head";
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { resolve } from 'node:path'
+
 import { transformerTwoslash} from '@shikijs/vitepress-twoslash'
 
 import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs'
@@ -10,7 +11,7 @@ import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs
 const SITE_URL = "https://blog.xiyuan.cc";
 const SITE_TITLE = "XiYuan's Tech Insight";
 
-export const BASE_PATH = "/tech_insight/";
+export const BASE_PATH = "/wiki/";
 
 const SidebarXLab: DefaultTheme.SidebarItem[] = [
 
@@ -119,9 +120,9 @@ export default defineConfig({
   description:
     "insight,content, thoughts that worth sharing for dev-enthusiast",
   cleanUrls: true,
-  // srcDir: 'docs',
   base: BASE_PATH,
   outDir: './dist',
+  cacheDir: "./cache",
   // srcExclude: ["oss"],
   lastUpdated:true,
   head: [
@@ -154,7 +155,6 @@ export default defineConfig({
   },
   markdown: {
     lineNumbers: true,
-    math: true,
     container: {
       tipLabel: "提示",
       warningLabel: "警告",
