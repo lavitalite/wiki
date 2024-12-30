@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
+    "target": "esnext",
     "baseUrl": ".",
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "jsx": "preserve",
     "paths": {
       "@": [
         "src"
@@ -13,7 +15,7 @@
       ]
     },
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "test/**/*.ts", "test/**/*.ts"],
   "exclude": [
     "node_modules",
     "dist"

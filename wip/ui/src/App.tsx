@@ -1,4 +1,4 @@
-import {BEmbed} from "./components/Embed/BEmbed";
+import {BEmbed} from "./components/b-embed/BEmbed";
 
 const VIDEO_SRC = "https://www.youtube.com/watch?v=iPIZNSgJHnI"
 

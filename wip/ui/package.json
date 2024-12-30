@@ -1,0 +1,64 @@
+{
+  "name": "vita-ui",
+  "type": "module",
+ "private": "true",
+  "repository": "https://github.com/xiyuan404/vita-ui",
+  "homepage": "https://vita.dev",
+  "main": "dist/cjs/main.js",
+  "module": "dist/es/main.js",
+  "jsdelivr": "dist/iife/mian.js",
+  "unpkg": "dist/iife/main.js",
+  "types": "dist/types/main.d.ts",
+  "keywords": [
+    "vita-ui",
+    "vue3",
+    "ui framework"
+  ],
+ "scripts": {
+  "serve:react": "vite --mode react",
+  "serve:vue": "vite --mode vue",
+  "build:react": "FRAMEWORK=react tsc && vite build",
+  "build:vue": "FRAMEWORK=vue vite build",
+  "build:types": "vue-tsc --declaration --emitDeclarationOnly --outDir ./dist/types --project tsconfig.build.json",
+  "preview": "vite preview",
+  "test:unit": "vitest",
+  "typecheck": "vue-tsc --noEmit",
+  "lint": "eslint --ext .js,.vue src",
+  "lint:style": "stylelint '**/*.{vue,html,scc,scss}' --fix",
+  "push": "npm publish --tag=next",
+  "push-production": "npm publish --tag=latest",
+  "serve:storybook": "storybook dev -p 6006",
+  "build:storybook": "storybook build",
+  "start: storybook": "serve storybook-static"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "node": "./dist/esm-node/main.mjs",
+        "types": "./dist/types/main.d.ts",
+        "default": "./dist/es/main.js"
+      }
+    },
+    "./css": {
+      "import": {
+        "node": "./dist/vita-ui.css",
+        "default": "./dost/styles/index.css"
+      }
+    },
+    "./web-components": "./dist/web-components/main.js",
+    "./iife": "./dist/iife/main.js",
+    "./styles/*": "./dist/styles/*",
+    "./dist/*": "./dist/*"
+  },
+  "typesVersions": {
+    "*": {
+      "web-components": [
+        "dist/types/main.d.ts"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org" 
+  }
+}

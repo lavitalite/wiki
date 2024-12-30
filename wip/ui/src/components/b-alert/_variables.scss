@@ -1,0 +1,35 @@
+:root,
+:host {
+  /* General */
+  --vita-alert-position: relative;
+  --vita-alert-display: flex;
+  --vita-alert-align-items: center;
+  --vita-alert-margin-y: 0.25rem;
+  --vita-alert-padding-y: 0.75rem;
+  --vita-alert-padding-x: 0.75rem;
+  --vita-alert-padding-y-dense: 0.25rem;
+  --vita-alert-border-width: 0;
+  --vita-alert-border-radius: 4px;
+  --vita-alert-box-shadow: var(--vita-box-shadow)
+  --vita-alert-color: transparent;
+
+
+  // Title
+  --vita-alert-title-font-weight: 600;
+  
+
+  // Border border-radius
+  --vita-alert-top-border-radius: 4px 4px 0 0;
+  --vita-alert-right-border-radius:  0 4px 4px 0;
+  --vita-alert-bottom-border-radius: 0 0 4px 4px;
+  --vita-alert-left-border-raidus: 4px 0 0 4px;
+
+
+  /* Close */
+  margin-left-x: 0.5rem;
+  --vita-alert-close-size: 1rem;
+  --vita-close-marg
+
+  /* Alert Stripe */
+  --vita-alert-stripe-size: 0.25rem
+}
