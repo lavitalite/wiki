@@ -25,7 +25,7 @@ jobs:
         node_version: [lts/*]
       fail-fast: false
 
-    steps:
+w    steps:
       - name: Set git to use LF
         run: |
           git config --global core.autocrlf false
