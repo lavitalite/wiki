@@ -26,6 +26,7 @@
     "release": "pnpm --filter deploy release",
     "deploy": "cd packages/docs && pnpm install && pnpm build:docs"
   },
+  "packageManager": "^pnpm@9.15.2",
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {
