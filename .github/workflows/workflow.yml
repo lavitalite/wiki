@@ -34,20 +34,26 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9.15.2
 
-      - name: Set node ${{ matrix.node_version }}
+      - name: Set node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: lts/*
           cache: pnpm
+          registry-url: "https://registry.npmjs.org"
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
+      - name: Install Dependencies
+        run: pnpm i
+
       - name: Build with VitePress
         run: cd packages/docs && pnpm install && pnpm build:docs
+
       - name: Debug Build Output
         run: ls -lh ./packages/docs/dist
       - name: Upload artifact for GitHub Pages
@@ -66,8 +72,6 @@ jobs:
 
     name: Deploy
     steps:
-      - name: List uploaded artifacts
-        uses: actions/download-artifact@v3
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
