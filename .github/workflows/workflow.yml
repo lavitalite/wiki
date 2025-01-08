@@ -58,7 +58,7 @@ jobs:
           retention-days: 1
 
   deploy:
-    needs: build
+    needs: [build]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -67,6 +67,9 @@ jobs:
     steps:
       - name: List uploaded artifacts
         uses: actions/download-artifact@v3
+        with:
+          name: github-pages
+          path: ./packages/docs/dist 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
