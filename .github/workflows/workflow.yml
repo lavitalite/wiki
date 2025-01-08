@@ -58,12 +58,14 @@ jobs:
         run: pnpm install
 
       - name: Build with VitePress
-        run: pnpm run build:docs
+        run: |
+          cd packages/docs
+          pnpm run build:docs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./packages/docs/dist
 
   deploy:
     environment:
