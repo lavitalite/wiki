@@ -2,4 +2,9 @@ node_modules
 cache
 dist
 .vite-inspect
-./vitepress/temp
+**/.vitepress/config.ts.timestamp-*
+**/.vitepress/*.timestamp-*
+**/.vitepress/cache
+**/.vitepress/dist
+**/.vitepress/.temp
+.temp

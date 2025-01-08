@@ -1,4 +1,8 @@
 node_modules
 dist
 cache
-config.ts.timestamp-*
+**/.vitepress/config.ts.timestamp-*
+**/.vitepress/*.timestamp-*
+**/.vitepress/cache
+**/.vitepress/.temp
+**/.vitepress/dist
