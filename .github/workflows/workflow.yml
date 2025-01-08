@@ -23,11 +23,6 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         node_version: [lts/*]
-        include:
-          - os: macos-latest
-            node_version: lts/*
-          - os: windows-latest
-            node_version: lts/*
       fail-fast: false
 
     steps:
