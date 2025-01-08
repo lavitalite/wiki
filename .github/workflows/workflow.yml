@@ -30,41 +30,47 @@ jobs:
         run: |
           git config --global core.autocrlf false
           git config --global core.eol lf
-
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9.15.2 # Added specific PNPM version
+          version: 9.15.2
 
       - name: Set node ${{ matrix.node_version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node_version }}
           cache: pnpm
-
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Build with VitePress
         run: cd packages/docs && pnpm install && pnpm build:docs
-
+      - name: Debug Build Output
+        run: ls -lh ./packages/docs/dist
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: github-pages
           path: ./packages/docs/dist
+          retention-days: 1
 
   deploy:
+    needs: [build]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
     runs-on: ubuntu-latest
 
     name: Deploy
     steps:
+      - name: List uploaded artifacts
+        uses: actions/download-artifact@v3
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v3
+        with:
+          artifact_name: github-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
