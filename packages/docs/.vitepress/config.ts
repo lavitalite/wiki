@@ -1,4 +1,4 @@
-
+/// <reference types="vite/client" />
 import { defineConfig } from "vitepress"
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 import { fileURLToPath } from 'node:url'
