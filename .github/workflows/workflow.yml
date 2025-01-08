@@ -57,6 +57,7 @@ jobs:
         with:
           name: github-pages
           path: ./packages/docs/dist
+          retention-days: 1
 
   deploy:
     needs: build
