@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress"
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 import { fileURLToPath } from 'node:url'
 
-export const BASE_PATH = '/wiki/'
+export const BASE_PATH = '/zest-ui/'
 export default defineConfig({
   srcDir: 'content',
   base: BASE_PATH,
