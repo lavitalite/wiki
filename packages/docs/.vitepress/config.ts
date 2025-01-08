@@ -2,6 +2,10 @@
 import { defineConfig } from "vitepress"
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 import { fileURLToPath } from 'node:url'
+import { resolve } from 'node:path'
+import { dirname } from 'node:path'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export const BASE_PATH = '/zest-ui/'
 export default defineConfig({
@@ -16,7 +20,8 @@ export default defineConfig({
 
   },
   vite: {
-    configFile: fileURLToPath(import.meta.resolve('../vite.config.ts'))
+    configFile: resolve(__dirname, '../vite.config.ts'),
+    //configFile: fileURLToPath(import.meta.resolve('../vite.config.ts'))
   },
   themeConfig: {
     // theme-level options
