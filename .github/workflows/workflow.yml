@@ -54,6 +54,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: root dep install
+        run: pnpm install
       - name: Build with VitePress
         run: cd packages/docs && pnpm install && pnpm build:docs
 
