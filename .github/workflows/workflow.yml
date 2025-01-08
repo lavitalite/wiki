@@ -68,11 +68,11 @@ jobs:
       - name: List uploaded artifacts
         uses: actions/download-artifact@v3
         with:
-          name: github-pages
-          path: ./packages/docs/dist 
+          path: ./dist 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
         with:
           artifact_name: github-pages
           token: ${{ secrets.GITHUB_TOKEN }}
+          path: ./dist
