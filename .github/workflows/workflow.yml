@@ -43,7 +43,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 8.15.1 # Added specific PNPM version
+          version: 9.15.2 # Added specific PNPM version
 
       - name: Set node ${{ matrix.node_version }}
         uses: actions/setup-node@v4
