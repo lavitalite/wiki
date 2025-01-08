@@ -23,7 +23,8 @@
     "sandbox:vue-cli": "pnpm --filter sandbox dev:vue-cli",
     "sandbox:web-components": "pnpm --filter sandbox dev:web-components",
     "push": "pnpm --filter vita-ui push",
-    "release": "pnpm --filter deploy release"
+    "release": "pnpm --filter deploy release",
+    "deploy": "cd packages/docs && pnpm install && pnpm build:docs"
   },
   "pnpm": {
     "peerDependencyRules": {

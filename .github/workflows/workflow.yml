@@ -42,8 +42,6 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 8.15.1 # Added specific PNPM version
 
       - name: Set node ${{ matrix.node_version }}
         uses: actions/setup-node@v4
@@ -51,21 +49,19 @@ jobs:
           node-version: ${{ matrix.node_version }}
           cache: pnpm
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
       - name: Install dependencies
         run: pnpm install
 
       - name: Build with VitePress
-        run: |
-          cd packages/docs
-          pnpm run build:docs
+        run: cd packages/docs && pnpm install && pnpm build:docs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./packages/docs/dist
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
   deploy:
     environment:
