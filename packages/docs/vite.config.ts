@@ -1,6 +1,5 @@
 import { defineConfig, createLogger } from 'vite'
-import path, { resolve } from 'path'
-import { fileURLToPath } from 'node:url'
+import { resolve } from 'path'
 
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -8,8 +7,9 @@ import Inspect from 'vite-plugin-inspect'
 import { groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-icons'
 
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+// import { fileURLToPath } from 'node:url'
+// const __filename = fileURLToPath(import.meta.url)
+// const __dirname = path.dirname(__filename)
 const logger = createLogger();
 
 export default defineConfig({
