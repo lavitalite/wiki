@@ -25,7 +25,7 @@ jobs:
         node_version: [lts/*]
       fail-fast: false
 
-w    steps:
+    steps:
       - name: Set git to use LF
         run: |
           git config --global core.autocrlf false
@@ -57,7 +57,6 @@ w    steps:
         run: |
           cp -rL ./packages/docs/dist ./dist
           rm -rf ./packages/docs/dist
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
