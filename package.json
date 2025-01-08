@@ -1,0 +1,39 @@
+{
+  "name": "vita-ui",
+  "repository": "git@github.com:xiyuan404/vita-ui.git",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "catalog:",
+    "unplugin-auto-import": "catalog:",
+    "unplugin-vue-components": "catalog:"
+  },
+  "scripts": {
+    "serve:storybook": "pnpm --filter vita-ui serve:storybook",
+    "start:docs:ci": "pnpm --filter docs start:ci",
+    "build": "pnpm --filter vita-ui build",
+    "build:storybook": "pnpm --filter vita-ui build:storybook",
+    "build:docs": "pnpm --filter docs build",
+    "build:nuxt": "pnpm --filter @vuestic/nuxt build",
+    "test:unit": "pnpm --filter vita-ui test:unit",
+    "lint": "pnpm --filter vita-ui lint",
+    "lint:style": "pnpm --filter vita-ui lint:style",
+    "serve:docs": "pnpm --filter docs serve",
+    "sandbox:vite": "pnpm --filter sandbox dev:vite",
+    "sandbox:nuxt": "pnpm --filter sandbox dev:nuxt",
+    "sandbox:vue-cli": "pnpm --filter sandbox dev:vue-cli",
+    "sandbox:web-components": "pnpm --filter sandbox dev:web-components",
+    "push": "pnpm --filter vita-ui push",
+    "release": "pnpm --filter deploy release"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "vite": "6"
+      },
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
+  }
+}
