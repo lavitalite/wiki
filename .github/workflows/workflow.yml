@@ -34,6 +34,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -46,23 +48,16 @@ jobs:
           node-version: ${{ matrix.node_version }}
           cache: pnpm
 
-      - name: Install dependencies
-        run: pnpm install
-
       - name: root dep install
         run: pnpm install
       - name: Build with VitePress
         run: cd packages/docs && pnpm install && pnpm build:docs
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-artifact@v4
         with:
+          name: github-pages
           path: ./packages/docs/dist
-          name: github-pages-${{ github.run_id }}
-          retention-days: 1
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
 
   deploy:
     environment:
