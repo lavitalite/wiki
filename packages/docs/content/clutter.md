@@ -1,0 +1,1 @@
+A predicate is an expression that evaluates to TRUE or FALSE. Predicates are used in the search condition of WHERE clauses and HAVING clauses, the join conditions of FROM clauses, and other constructs where a Boolean value is required.

@@ -1,0 +1,532 @@
+// Iterable protocols
+/**
+ * To be iterable, an object(or up its prototype chain) must implement the Symbol.iterator method
+ */
+
+/**
+ * when an iterable object is iterating, 
+ * (such as a for...of loop), its[Symbol.iterator]() method is called
+ * and the return iterator is used to obtain the values to iterated
+ * 
+ */
+
+
+// Iterator protocols
+
+/**
+ * All built-in iterators inherit from Iterator.prototype, which implements the [Symbol.iterator]()
+ */
+
+/**
+ * an object is an iterator when it implements the (next,return,throw) methods conforming to `Iterator` interface
+ * 
+ */
+
+
+
+
+
+
+
+
+// Async Iterable protocols
+
+/**
+ * an object is an async iterable when it implements the `[Symbol.asyncIterator]()`, `next()`,
+ *  `throw()`(optional) and `return()`(optional)
+ */
+
+
+interface IteratorReturnResult<TReturn> {
+  done: true;
+  value: TReturn
+}
+
+
+
+interface IteratorYieldResult<TYield> {
+  /**
+   * done is a boolean indicating whether the iterator has completed its iteration. It is false until the iterator is exhausted, at which point it becomes true. Therefore, it is never possible for done to be true here,
+   *  as we would not be returning this object if the iteration was already exhausted.
+   */
+  done?: false;
+  value: TYield;
+}
+
+type IteratorResult<T, TReturn = any> = IteratorYieldResult<T> | IteratorReturnResult<TReturn>
+
+
+
+
+
+interface Iterator<T, TReturn = any, TNext = any> {
+  next(...[value]: [] | [TNext]): IteratorResult<T, TReturn>
+  return?(value?: TReturn): IteratorResult<T, TReturn>
+  throw?(e?: any): IteratorResult<T, TReturn>
+}
+
+
+
+interface Iterable<T, TReturn = any, TNext = any> {
+  [Symbol.iterator](): Iterator<T, TReturn, TNext>
+}
+
+
+interface IterableIterator<T, TReturn = any, TNext = any> extends Iterator<T, TReturn, TNext> {
+  [Symbol.iterator](): IterableIterator<T, TReturn, TNext>
+}
+
+
+type BuiltInIteratorReturn = intrinsic
+
+
+interface ArrayIterator<T> extends IteratorObject<T, BuiltinIteratorReturn> {
+  [Symbol.iterator](): ArrayIterator<T>
+}
+
+
+interface Array<T> {
+  [Symbol.iterator](): ArrayIterator<T>
+
+
+  entries(): ArrayIterator<[number, T]>
+
+
+  keys(): ArrayIterator<number>
+
+  values(): ArrayIterator<T>
+}
+
+
+interface ArrayConstructor {
+  from<T>(iterable: Iterable<T> | ArrayLike<T>): T[]
+
+  from<T, U>(iterable: Iterable<T> | ArrayLike<T>, mapFn: (v: T, k: number) => U, thisArg?: any): U[]
+}
+
+
+interface ReadonlyArray<T> {
+  [Symbol.iterator](): ArrayIterator<T>
+
+  /**
+   * Returns an iterable of key,value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, T]>
+
+
+  keys(): ArrayIterator<number>
+
+  values(): ArrayIterator<T>
+}
+
+
+
+interface IArguments {
+  [Symbol.iterator](): ArrayIterator<any>
+}
+
+
+interface MapIterator<T> extends IteratorObject<T, BuiltinIteratorReturn, unknown> {
+  [Symbol.iterator](): MapIterator<T>
+}
+
+
+
+
+
+
+/**
+ * syntax expecting iterables
+ * spread operator 
+ * destructuring 
+ * for ... of
+ */
+
+
+interface Map<K, V> {
+  /** Returns an iterable of entries in the map. */
+  [Symbol.iterator](): MapIterator<[K, V]>;
+
+  /**
+   * Returns an iterable of key, value pairs for every entry in the map.
+   */
+  entries(): MapIterator<[K, V]>;
+
+  /**
+   * Returns an iterable of keys in the map
+   */
+  keys(): MapIterator<K>;
+
+  /**
+   * Returns an iterable of values in the map
+   */
+  values(): MapIterator<V>;
+}
+
+interface ReadonlyMap<K, V> {
+  /** Returns an iterable of entries in the map. */
+  [Symbol.iterator](): MapIterator<[K, V]>;
+
+  /**
+   * Returns an iterable of key, value pairs for every entry in the map.
+   */
+  entries(): MapIterator<[K, V]>;
+
+  /**
+   * Returns an iterable of keys in the map
+   */
+  keys(): MapIterator<K>;
+
+  /**
+   * Returns an iterable of values in the map
+   */
+  values(): MapIterator<V>;
+}
+
+interface MapConstructor {
+  new(): Map<any, any>;
+  new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>;
+}
+
+interface WeakMap<K extends WeakKey, V> { }
+
+interface WeakMapConstructor {
+  new <K extends WeakKey, V>(iterable: Iterable<readonly [K, V]>): WeakMap<K, V>;
+}
+
+interface SetIterator<T> extends IteratorObject<T, BuiltinIteratorReturn, unknown> {
+  [Symbol.iterator](): SetIterator<T>;
+}
+
+interface Set<T> {
+  /** Iterates over values in the set. */
+  [Symbol.iterator](): SetIterator<T>;
+  /**
+   * Returns an iterable of [v,v] pairs for every value `v` in the set.
+   */
+  entries(): SetIterator<[T, T]>;
+  /**
+   * Despite its name, returns an iterable of the values in the set.
+   */
+  keys(): SetIterator<T>;
+
+  /**
+   * Returns an iterable of values in the set.
+   */
+  values(): SetIterator<T>;
+}
+
+interface ReadonlySet<T> {
+  /** Iterates over values in the set. */
+  [Symbol.iterator](): SetIterator<T>;
+
+  /**
+   * Returns an iterable of [v,v] pairs for every value `v` in the set.
+   */
+  entries(): SetIterator<[T, T]>;
+
+  /**
+   * Despite its name, returns an iterable of the values in the set.
+   */
+  keys(): SetIterator<T>;
+
+  /**
+   * Returns an iterable of values in the set.
+   */
+  values(): SetIterator<T>;
+}
+
+interface SetConstructor {
+  new <T>(iterable?: Iterable<T> | null): Set<T>;
+}
+
+interface WeakSet<T extends WeakKey> { }
+
+interface WeakSetConstructor {
+  new <T extends WeakKey = WeakKey>(iterable: Iterable<T>): WeakSet<T>;
+}
+
+interface Promise<T> { }
+
+interface PromiseConstructor {
+  /**
+   * Creates a Promise that is resolved with an array of results when all of the provided Promises
+   * resolve, or rejected when any Promise is rejected.
+   * @param values An iterable of Promises.
+   * @returns A new Promise.
+   */
+  all<T>(values: Iterable<T | PromiseLike<T>>): Promise<Awaited<T>[]>;
+
+  /**
+   * Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+   * or rejected.
+   * @param values An iterable of Promises.
+   * @returns A new Promise.
+   */
+  race<T>(values: Iterable<T | PromiseLike<T>>): Promise<Awaited<T>>;
+}
+
+interface StringIterator<T> extends IteratorObject<T, BuiltinIteratorReturn, unknown> {
+  [Symbol.iterator](): StringIterator<T>;
+}
+
+interface String {
+  /** Iterator */
+  [Symbol.iterator](): StringIterator<string>;
+}
+
+interface Int8Array {
+  [Symbol.iterator](): ArrayIterator<number>;
+  /**
+   * Returns an array of key, value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, number]>;
+  /**
+   * Returns an list of keys in the array
+   */
+  keys(): ArrayIterator<number>;
+  /**
+   * Returns an list of values in the array
+   */
+  values(): ArrayIterator<number>;
+}
+
+interface Int8ArrayConstructor {
+  new(elements: Iterable<number>): Int8Array;
+
+  /**
+   * Creates an array from an array-like or iterable object.
+   * @param arrayLike An array-like or iterable object to convert to an array.
+   * @param mapfn A mapping function to call on every element of the array.
+   * @param thisArg Value of 'this' used to invoke the mapfn.
+   */
+  from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int8Array;
+}
+
+interface Uint8Array {
+  [Symbol.iterator](): ArrayIterator<number>;
+  /**
+   * Returns an array of key, value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, number]>;
+  /**
+   * Returns an list of keys in the array
+   */
+  keys(): ArrayIterator<number>;
+  /**
+   * Returns an list of values in the array
+   */
+  values(): ArrayIterator<number>;
+}
+
+interface Uint8ArrayConstructor {
+  new(elements: Iterable<number>): Uint8Array;
+
+  /**
+   * Creates an array from an array-like or iterable object.
+   * @param arrayLike An array-like or iterable object to convert to an array.
+   * @param mapfn A mapping function to call on every element of the array.
+   * @param thisArg Value of 'this' used to invoke the mapfn.
+   */
+  from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8Array;
+}
+
+interface Uint8ClampedArray {
+  [Symbol.iterator](): ArrayIterator<number>;
+  /**
+   * Returns an array of key, value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, number]>;
+
+  /**
+   * Returns an list of keys in the array
+   */
+  keys(): ArrayIterator<number>;
+
+  /**
+   * Returns an list of values in the array
+   */
+  values(): ArrayIterator<number>;
+}
+
+interface Uint8ClampedArrayConstructor {
+  new(elements: Iterable<number>): Uint8ClampedArray;
+
+  /**
+   * Creates an array from an array-like or iterable object.
+   * @param arrayLike An array-like or iterable object to convert to an array.
+   * @param mapfn A mapping function to call on every element of the array.
+   * @param thisArg Value of 'this' used to invoke the mapfn.
+   */
+  from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8ClampedArray;
+}
+
+interface Int16Array {
+  [Symbol.iterator](): ArrayIterator<number>;
+  /**
+   * Returns an array of key, value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, number]>;
+
+  /**
+   * Returns an list of keys in the array
+   */
+  keys(): ArrayIterator<number>;
+
+  /**
+   * Returns an list of values in the array
+   */
+  values(): ArrayIterator<number>;
+}
+
+interface Int16ArrayConstructor {
+  new(elements: Iterable<number>): Int16Array;
+
+  /**
+   * Creates an array from an array-like or iterable object.
+   * @param arrayLike An array-like or iterable object to convert to an array.
+   * @param mapfn A mapping function to call on every element of the array.
+   * @param thisArg Value of 'this' used to invoke the mapfn.
+   */
+  from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int16Array;
+}
+
+interface Uint16Array {
+  [Symbol.iterator](): ArrayIterator<number>;
+  /**
+   * Returns an array of key, value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, number]>;
+  /**
+   * Returns an list of keys in the array
+   */
+  keys(): ArrayIterator<number>;
+  /**
+   * Returns an list of values in the array
+   */
+  values(): ArrayIterator<number>;
+}
+
+interface Uint16ArrayConstructor {
+  new(elements: Iterable<number>): Uint16Array;
+
+  /**
+   * Creates an array from an array-like or iterable object.
+   * @param arrayLike An array-like or iterable object to convert to an array.
+   * @param mapfn A mapping function to call on every element of the array.
+   * @param thisArg Value of 'this' used to invoke the mapfn.
+   */
+  from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint16Array;
+}
+
+interface Int32Array {
+  [Symbol.iterator](): ArrayIterator<number>;
+  /**
+   * Returns an array of key, value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, number]>;
+  /**
+   * Returns an list of keys in the array
+   */
+  keys(): ArrayIterator<number>;
+  /**
+   * Returns an list of values in the array
+   */
+  values(): ArrayIterator<number>;
+}
+
+interface Int32ArrayConstructor {
+  new(elements: Iterable<number>): Int32Array;
+
+  /**
+   * Creates an array from an array-like or iterable object.
+   * @param arrayLike An array-like or iterable object to convert to an array.
+   * @param mapfn A mapping function to call on every element of the array.
+   * @param thisArg Value of 'this' used to invoke the mapfn.
+   */
+  from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int32Array;
+}
+
+interface Uint32Array {
+  [Symbol.iterator](): ArrayIterator<number>;
+  /**
+   * Returns an array of key, value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, number]>;
+  /**
+   * Returns an list of keys in the array
+   */
+  keys(): ArrayIterator<number>;
+  /**
+   * Returns an list of values in the array
+   */
+  values(): ArrayIterator<number>;
+}
+
+interface Uint32ArrayConstructor {
+  new(elements: Iterable<number>): Uint32Array;
+
+  /**
+   * Creates an array from an array-like or iterable object.
+   * @param arrayLike An array-like or iterable object to convert to an array.
+   * @param mapfn A mapping function to call on every element of the array.
+   * @param thisArg Value of 'this' used to invoke the mapfn.
+   */
+  from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint32Array;
+}
+
+interface Float32Array {
+  [Symbol.iterator](): ArrayIterator<number>;
+  /**
+   * Returns an array of key, value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, number]>;
+  /**
+   * Returns an list of keys in the array
+   */
+  keys(): ArrayIterator<number>;
+  /**
+   * Returns an list of values in the array
+   */
+  values(): ArrayIterator<number>;
+}
+
+interface Float32ArrayConstructor {
+  new(elements: Iterable<number>): Float32Array;
+
+  /**
+   * Creates an array from an array-like or iterable object.
+   * @param arrayLike An array-like or iterable object to convert to an array.
+   * @param mapfn A mapping function to call on every element of the array.
+   * @param thisArg Value of 'this' used to invoke the mapfn.
+   */
+  from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float32Array;
+}
+
+interface Float64Array {
+  [Symbol.iterator](): ArrayIterator<number>;
+  /**
+   * Returns an array of key, value pairs for every entry in the array
+   */
+  entries(): ArrayIterator<[number, number]>;
+  /**
+   * Returns an list of keys in the array
+   */
+  keys(): ArrayIterator<number>;
+  /**
+   * Returns an list of values in the array
+   */
+  values(): ArrayIterator<number>;
+}
+
+interface Float64ArrayConstructor {
+  new(elements: Iterable<number>): Float64Array;
+
+  /**
+   * Creates an array from an array-like or iterable object.
+   * @param arrayLike An array-like or iterable object to convert to an array.
+   * @param mapfn A mapping function to call on every element of the array.
+   * @param thisArg Value of 'this' used to invoke the mapfn.
+   */
+  from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float64Array;
+}

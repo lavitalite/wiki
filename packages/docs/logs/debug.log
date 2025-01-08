@@ -1,0 +1,288 @@
+2025-01-02T15:25:47.204Z vite:config bundled config file loaded in 71.61ms
+2025-01-02T15:25:47.428Z vite:config bundled config file loaded in 169.25ms
+Alias config: [{"find":"@theme","replacement":"/Users/ayao/repos/vita-ui/packages/docs/.vitepress/theme"},{"find":"@siteData","replacement":"/@siteData"},{"find":{},"replacement":"/Users/ayao/repos/vita-ui/node_modules/.pnpm/vitepress@1.5.0_@algolia+client-search@5.18.0_postcss@8.4.49_search-insights@2.17.3/node_modules/vitepress/dist/client/index.js"},{"find":{},"replacement":"/Users/ayao/repos/vita-ui/node_modules/.pnpm/vitepress@1.5.0_@algolia+client-search@5.18.0_postcss@8.4.49_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/index.js"},{"find":{},"replacement":"/Users/ayao/repos/vita-ui/node_modules/.pnpm/vitepress@1.5.0_@algolia+client-search@5.18.0_postcss@8.4.49_search-insights@2.17.3/node_modules/vitepress/lib/vue-demi.mjs"},{"find":{},"replacement":"/Users/ayao/node_modules/vue/dist/vue.runtime.esm-bundler.js"},{"find":"@utils","replacement":"/Users/ayao/repos/vita-ui/packages/docs/utils"},{"find":"@","replacement":"/Users/ayao/repos/vita-ui/packages/docs/content"},{"find":"@oss","replacement":"/Users/ayao/repos/vita-ui/packages/docs/oss"},{"find":{},"replacement":"/@fs/Users/ayao/repos/vita-ui/node_modules/.pnpm/vite@5.4.11/node_modules/vite/dist/client/env.mjs"},{"find":{},"replacement":"/@fs/Users/ayao/repos/vita-ui/node_modules/.pnpm/vite@5.4.11/node_modules/vite/dist/client/client.mjs"}]
+2025-01-02T15:25:47.513Z vite:config using resolved config: {
+  root: '/Users/ayao/repos/vita-ui/packages/docs',
+  optimizeDeps: {
+    holdUntilCrawlEnd: true,
+    exclude: [ 'vitepress', '@docsearch/js', 'vitepress' ],
+    include: [
+      'vue',
+      'vitepress > @vue/devtools-api',
+      'vitepress > @vueuse/core',
+      'vue',
+      '@vueuse/core'
+    ],
+    esbuildOptions: { preserveSymlinks: false }
+  },
+  logLevel: 'info',
+  clearScreen: false,
+  resolve: {
+    mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+    conditions: [],
+    extensions: [
+      '.mjs',  '.js',
+      '.mts',  '.ts',
+      '.jsx',  '.tsx',
+      '.json'
+    ],
+    dedupe: [ 'vue' ],
+    preserveSymlinks: false,
+    alias: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ]
+  },
+  plugins: [
+    'vite:optimized-deps',
+    'vite:watch-package-data',
+    'vite:pre-alias',
+    'alias',
+    'vite-plugin-inspect',
+    'vitepress:webfonts',
+    'vite:modulepreload-polyfill',
+    'vite:resolve',
+    'vite:html-inline-proxy',
+    'vite:css',
+    'vite:esbuild',
+    'vite:json',
+    'vite:wasm-helper',
+    'vite:worker',
+    'vite:asset',
+    'vite:debug-alias',
+    'vitepress',
+    'vitepress:rewrites',
+    'vite:vue',
+    'vitepress:hmr-fix',
+    'vitepress:local-search',
+    'vitepress:data',
+    'vitepress:dynamic-routes',
+    'vite:wasm-fallback',
+    'vite:define',
+    'vite:css-post',
+    'vite:worker-import-meta-url',
+    'vite:asset-import-meta-url',
+    'vite:dynamic-import-vars',
+    'vite:import-glob',
+    'unplugin-vue-components',
+    'unplugin-auto-import',
+    'vitepress-plugin-group-icons',
+    'vite:client-inject',
+    'vite:css-analysis',
+    'vite:import-analysis'
+  ],
+  base: '/wiki/',
+  cacheDir: '/Users/ayao/repos/vita-ui/packages/docs/cache',
+  server: {
+    preTransformRequests: true,
+    _: [ 'dev' ],
+    fs: {
+      strict: true,
+      allow: [Array],
+      deny: [Array],
+      cachedChecks: undefined
+    },
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    middlewareMode: false
+  },
+  customLogger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  define: {
+    __VP_LOCAL_SEARCH__: false,
+    __ALGOLIA__: false,
+    __CARBON__: false,
+    __ASSETS_DIR__: '"assets"',
+    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true,
+    __VUE_OPTIONS_API__: true,
+    __VUE_PROD_DEVTOOLS__: false
+  },
+  vitepress: {
+    root: '/Users/ayao/repos/vita-ui/packages/docs',
+    srcDir: '/Users/ayao/repos/vita-ui/packages/docs',
+    assetsDir: 'assets',
+    site: {
+      lang: 'en-US',
+      dir: 'ltr',
+      title: 'VitePress',
+      titleTemplate: undefined,
+      description: 'A VitePress site',
+      base: '/wiki/',
+      head: [Array],
+      router: [Object],
+      appearance: true,
+      themeConfig: {},
+      locales: {},
+      scrollOffset: 134,
+      cleanUrls: false,
+      contentProps: undefined
+    },
+    themeDir: '/Users/ayao/repos/vita-ui/packages/docs/.vitepress/theme',
+    pages: [ 'content/index.md' ],
+    dynamicRoutes: { routes: [], fileToModulesMap: {} },
+    configPath: '/Users/ayao/repos/vita-ui/packages/docs/.vitepress/config.ts',
+    configDeps: [ '/Users/ayao/repos/vita-ui/packages/docs/.vitepress/config.ts' ],
+    outDir: '/Users/ayao/repos/vita-ui/packages/docs/dist',
+    cacheDir: '/Users/ayao/repos/vita-ui/packages/docs/cache',
+    logger: {
+      hasWarned: false,
+      info: [Function: info],
+      warn: [Function: warn],
+      warnOnce: [Function: warnOnce],
+      error: [Function: error],
+      clearScreen: [Function: clearScreen],
+      hasErrorLogged: [Function: hasErrorLogged]
+    },
+    tempDir: '/Users/ayao/repos/vita-ui/packages/docs/.vitepress/.temp',
+    markdown: { config: [Function: config] },
+    lastUpdated: false,
+    vue: undefined,
+    vite: undefined,
+    shouldPreload: undefined,
+    mpa: false,
+    metaChunk: false,
+    ignoreDeadLinks: undefined,
+    cleanUrls: false,
+    useWebFonts: false,
+    postRender: undefined,
+    buildEnd: undefined,
+    transformHead: undefined,
+    transformHtml: undefined,
+    transformPageData: undefined,
+    rewrites: { map: {}, inv: {} },
+    userConfig: {
+      base: '/wiki/',
+      outDir: 'dist',
+      cacheDir: 'cache',
+      markdown: [Object],
+      themeConfig: {}
+    },
+    sitemap: undefined,
+    buildConcurrency: 64
+  },
+  ssr: {
+    target: 'node',
+    external: [],
+    optimizeDeps: { noDiscovery: true, esbuildOptions: [Object] }
+  },
+  configFile: '/Users/ayao/repos/vita-ui/packages/docs/vite.config.ts',
+  configFileDependencies: [ '/Users/ayao/repos/vita-ui/packages/docs/vite.config.ts' ],
+  inlineConfig: {
+    root: '/Users/ayao/repos/vita-ui/packages/docs',
+    base: '/wiki/',
+    cacheDir: '/Users/ayao/repos/vita-ui/packages/docs/cache',
+    plugins: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    server: { _: [Array] },
+    customLogger: {
+      hasWarned: false,
+      info: [Function: info],
+      warn: [Function: warn],
+      warnOnce: [Function: warnOnce],
+      error: [Function: error],
+      clearScreen: [Function: clearScreen],
+      hasErrorLogged: [Function: hasErrorLogged]
+    },
+    configFile: undefined
+  },
+  decodedBase: '/wiki/',
+  rawBase: '/wiki/',
+  publicDir: '/Users/ayao/repos/vita-ui/packages/docs/public',
+  command: 'serve',
+  mode: 'development',
+  isWorker: false,
+  mainConfig: null,
+  bundleChain: [],
+  isProduction: false,
+  css: { lightningcss: undefined },
+  esbuild: { jsxDev: true },
+  build: {
+    target: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    cssTarget: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    outDir: 'dist',
+    assetsDir: 'assets',
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
+    sourcemap: false,
+    rollupOptions: {},
+    minify: 'esbuild',
+    terserOptions: {},
+    write: true,
+    emptyOutDir: null,
+    copyPublicDir: true,
+    manifest: false,
+    lib: false,
+    ssr: false,
+    ssrManifest: false,
+    ssrEmitAssets: false,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    watch: null,
+    commonjsOptions: { include: [Array], extensions: [Array] },
+    dynamicImportVarsOptions: { warnOnError: true, exclude: [Array] },
+    modulePreload: { polyfill: true },
+    cssMinify: true
+  },
+  preview: {
+    port: undefined,
+    strictPort: undefined,
+    host: undefined,
+    https: undefined,
+    open: undefined,
+    proxy: undefined,
+    cors: undefined,
+    headers: undefined
+  },
+  envDir: '/Users/ayao/repos/vita-ui/packages/docs',
+  env: { BASE_URL: '/wiki/', MODE: 'development', DEV: true, PROD: false },
+  assetsInclude: [Function: assetsInclude],
+  logger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  packageCache: Map(1) {
+    'fnpd_/Users/ayao/repos/vita-ui/packages/docs' => {
+      dir: '/Users/ayao/repos/vita-ui/packages/docs',
+      data: [Object],
+      hasSideEffects: [Function: hasSideEffects],
+      webResolvedImports: {},
+      nodeResolvedImports: {},
+      setResolvedCache: [Function: setResolvedCache],
+      getResolvedCache: [Function: getResolvedCache]
+    },
+    set: [Function (anonymous)]
+  },
+  createResolver: [Function (anonymous)],
+  worker: { format: 'iife', plugins: '() => plugins', rollupOptions: {} },
+  appType: 'spa',
+  experimental: { importGlobRestoreExtension: false, hmrPartialAccept: false },
+  getSortedPlugins: [Function: getSortedPlugins],
+  getSortedPluginHooks: [Function: getSortedPluginHooks]
+}
+failed to start server. error:
+Cannot convert undefined or null to object
+TypeError: Cannot convert undefined or null to object
+    at Function.values (<anonymous>)
+    at configureServer (file:///Users/ayao/repos/vita-ui/node_modules/.pnpm/vite-plugin-inspect@0.10.6_rollup@4.29.1_vite@5.4.11/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.UaceC5Dq.mjs:1408:12)
+    at configureServer (file:///Users/ayao/repos/vita-ui/node_modules/.pnpm/vite-plugin-inspect@0.10.6_rollup@4.29.1_vite@5.4.11/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.UaceC5Dq.mjs:1494:19)
+    at _createServer (file:///Users/ayao/repos/vita-ui/node_modules/.pnpm/vite@5.4.11/node_modules/vite/dist/node/chunks/dep-CB_7IfJ-.js:63080:26)
+    at async createDevServer (file:///Users/ayao/repos/vita-ui/node_modules/.pnpm/vitepress@1.5.0_@algolia+client-search@5.18.0_postcss@8.4.49_search-insights@2.17.3/node_modules/vitepress/dist/node/cli.js:422:20)

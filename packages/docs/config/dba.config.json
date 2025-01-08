@@ -1,0 +1,37 @@
+{
+  "$schema": "https://dataapibuilder.azureedge.net/schemas/v1.0.0/dab.draft.schema.json",
+  "data-sources": {
+    "database-type": "mssql",
+    "options": {
+      "set-session-context": true
+    },
+    "connection-string": "@env('DATABASE_CONNECTION_STRING')"
+  },
+  "runtime": {
+    "rest": {
+      "enabled": true,
+      "path": "/api"
+    }
+  },
+  "platforms": {
+    "telegram": {
+      "token": "@env('TELEGRAM_BOT_TOKEN')"
+    },
+    "twitter": {
+      "apiKey": "@env('TWITTER_API_KEY')",
+      "apiSecret": "@env('TWITTER_API_SECRET')",
+      "accessToken": "@env('TWITTER_ACCESS_TOKEN')",
+      "accessSecret": "@env('TWITTER_ACCESS_SECRET')"
+  },
+  "entities": {
+    "Book": {
+      "source": "books",
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": ["read", "write"]
+        }
+      ]
+    }
+  }
+}
