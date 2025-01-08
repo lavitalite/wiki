@@ -26,7 +26,7 @@ jobs:
     strategy:
       matrix:
       os: [ubuntu-latest]
-      node_version: lts/*]
+      node_version: [lts/*]
       include:
         - os: macos-latest
           node_version: lts/*
