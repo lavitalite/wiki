@@ -30,8 +30,8 @@ _sfc_main$14.setup = (props, ctx) => {
 function deserializeFunctions(r) {
   return Array.isArray(r) ? r.map(deserializeFunctions) : typeof r == "object" && r !== null ? Object.keys(r).reduce((t, n) => (t[n] = deserializeFunctions(r[n]), t), {}) : typeof r == "string" && r.startsWith("_vp-fn_") ? new Function(`return ${r.slice(7)}`)() : r;
 }
-const siteData = deserializeFunctions(JSON.parse('{"lang":"en-US","dir":"ltr","title":"VitePress","description":"A VitePress site","base":"/wiki/","head":[],"router":{"prefetchLinks":true},"appearance":true,"themeConfig":{},"locales":{},"scrollOffset":134,"cleanUrls":false}'));
-const __vite_import_meta_env__ = { "BASE_URL": "/wiki/", "DEV": false, "MODE": "production", "PROD": true, "SSR": true };
+const siteData = deserializeFunctions(JSON.parse('{"lang":"en-US","dir":"ltr","title":"VitePress","description":"A VitePress site","base":"/zest-ui/","head":[],"router":{"prefetchLinks":true},"appearance":true,"themeConfig":{},"locales":{},"scrollOffset":134,"cleanUrls":false}'));
+const __vite_import_meta_env__ = { "BASE_URL": "/zest-ui/", "DEV": false, "MODE": "production", "PROD": true, "SSR": true };
 const EXTERNAL_URL_RE = /^(?:[a-z]+:|\/\/)/i;
 const APPEARANCE_KEY = "vitepress-theme-appearance";
 const HASH_RE = /#.*$/;
@@ -197,7 +197,7 @@ function pathToFile(path) {
   pagePath = pagePath.replace(/\/$/, "/index");
   {
     if (inBrowser) {
-      const base = "/wiki/";
+      const base = "/zest-ui/";
       pagePath = sanitizeFileName(pagePath.slice(base.length).replace(/\//g, "_") || "index") + ".md";
       let pageHash = __VP_HASH_MAP__[pagePath.toLowerCase()];
       if (!pageHash) {
