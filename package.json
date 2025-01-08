@@ -7,6 +7,11 @@
     "unplugin-auto-import": "catalog:",
     "unplugin-vue-components": "catalog:"
   },
+  "engines": {
+    "node": ">=20.6.0",
+    "pnpm": ">=9.15.2"
+  },
+  "packageManager": "pnpm@9.15.2",
   "scripts": {
     "serve:storybook": "pnpm --filter vita-ui serve:storybook",
     "start:docs:ci": "pnpm --filter docs start:ci",
@@ -26,7 +31,6 @@
     "release": "pnpm --filter deploy release",
     "deploy": "cd packages/docs && pnpm install && pnpm build:docs"
   },
-  "packageManager": "pnpm@9.15.2",
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {
