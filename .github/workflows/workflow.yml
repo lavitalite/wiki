@@ -49,7 +49,8 @@ jobs:
 
       - name: Build with VitePress
         run: cd packages/docs && pnpm install && pnpm build:docs
-
+      - name: Debug Build Output
+        run: ls -lh ./packages/docs/dist
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-artifact@v3
         with:
