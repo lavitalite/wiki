@@ -5,8 +5,7 @@
   "devDependencies": {
     "vite": "catalog:",
     "unplugin-auto-import": "catalog:",
-    "unplugin-vue-components": "catalog:",
-    "node": "catalog:"
+    "unplugin-vue-components": "catalog:"
   },
   "engines": {
     "node": ">=20.6.0",

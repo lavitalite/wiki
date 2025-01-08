@@ -4,7 +4,6 @@ packages:
 catalog:
   # types
   "@types/node": "^22.10.1"
-  node: "20.11.1"
 
   # linting
   "@eslint/js": "^9.17.0"
