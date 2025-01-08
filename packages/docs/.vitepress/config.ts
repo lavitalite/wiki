@@ -22,7 +22,7 @@ export default defineConfig({
 
   },
   vite: {
-    configFile: fileURLToPath(import.meta.resolve('../vite.config.ts'))
+    // configFile: fileURLToPath(import.meta.resolve('../vite.config.ts'))
   },
   themeConfig: {
     // theme-level options
