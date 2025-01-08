@@ -63,6 +63,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./packages/docs/dist
+          name: github-pages-${{ github.run_id }}
+          retention-days: 1
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
