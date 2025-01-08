@@ -70,4 +70,4 @@ jobs:
         uses: actions/deploy-pages@v3
         with:
           artifact_name: github-pages
-          path: ./packages/docs/dist
+          token: ${{ secrets.GITHUB_TOKEN }}
