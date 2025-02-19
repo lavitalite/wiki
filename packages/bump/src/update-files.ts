@@ -1,5 +1,5 @@
 import { readJsonFile, readTextFile, writeJsonFile, writeTextFile } from "./fs";
-import { isManifest } from "./manifest";
+import { isManifest, isPackageLockManifest } from "./manifest";
 import { Operation } from "./operation";
 import path from "node:path"
 import { ProgressEvent } from "./types/version-bump-progress";
@@ -8,10 +8,9 @@ import { ProgressEvent } from "./types/version-bump-progress";
  */
 export async function updateFiles(operation: Operation): Promise<Operation> {
 
-
-  let { files } = operation.options;
-  for (let relPath of files) {
-    let modified = await updateFile(relPath, operation);
+  const { files } = operation.options;
+  for (const relPath of files) {
+    const modified = await updateFile(relPath, operation);
     if (modified) {
       operation.update({
         event: ProgressEvent.FileUpdated,
@@ -33,8 +32,8 @@ export async function updateFiles(operation: Operation): Promise<Operation> {
  *
  * @returns - `true` if the file was actually modified
  */
-async function updateFile(relPath, operation) {
-  let name = path.basename(relPath).trim().toLowerCase();
+async function updateFile(relPath: string, operation: Operation): Promise<boolean> {
+  const name = path.basename(relPath).trim().toLowerCase();
   switch (name) {
     case "package.json":
     case "package-lock.json":
@@ -61,7 +60,12 @@ async function updateManifestFile(relPath, operation) {
   let modified = false;
   let file = await readJsonFile(relPath, cwd);
   if (isManifest(file.data) && file.data.version !== newVersion) {
-    file.data.version = newVersion;
+    file.modified.push([['version'], newVersion])
+    if (isPackageLockManifest(file.data)) {
+      file.modified.push([['package', '', 'version'], newVersion])
+    }
+
+
     await writeJsonFile(file);
     modified = true;
   }

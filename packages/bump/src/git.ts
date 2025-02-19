@@ -50,7 +50,7 @@ export async function gitCommit(operation: Operation): Promise<Operation> {
  */
 
 export async function gitTag(operation) {
-  if (operation.options.tag) {
+  if (!operation.options.tag) {
     return operation
   }
 
