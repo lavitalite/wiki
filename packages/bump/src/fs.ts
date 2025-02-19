@@ -44,6 +44,7 @@ export function writeJsonFile(file: JsonFile): Promise<void> {
     newJSON = jsonc.applyEdits(newJSON, edit)
   }
 
+
   return writeTextFile({
     ...file,
     data: newJSON,

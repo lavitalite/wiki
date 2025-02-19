@@ -37,8 +37,6 @@ async function updateFile(relPath: string, operation: Operation): Promise<boolea
   switch (name) {
     case "package.json":
     case "package-lock.json":
-    case "bower.json":
-    case "component.json":
       return updateManifestFile(relPath, operation);
     default:
       return updateTextFile(relPath, operation);
