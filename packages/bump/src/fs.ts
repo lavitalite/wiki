@@ -41,7 +41,6 @@ export function writeJsonFile(file: JsonFile): Promise<void> {
 
   for (const [key, value] of file.modified) {
     const edit = (jsonc.modify(newJSON, key, value, {}))
-    console.log('edit->', edit)
     newJSON = jsonc.applyEdits(newJSON, edit)
   }
 
