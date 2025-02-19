@@ -57,7 +57,9 @@ async function updateManifestFile(relPath, operation) {
   let { newVersion } = operation.state;
   let modified = false;
   let file = await readJsonFile(relPath, cwd);
+
   if (isManifest(file.data) && file.data.version !== newVersion) {
+    console.log(file.data.version, newVersion)
     file.modified.push([['version'], newVersion])
     if (isPackageLockManifest(file.data)) {
       file.modified.push([['package', '', 'version'], newVersion])
