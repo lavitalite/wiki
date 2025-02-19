@@ -13,6 +13,7 @@
       "@/*": ["./content/*"],
       "~/*": ["./*"],
       "@oss/*": ["./oss/*"],
+      "/*": ["./"],
       "*": ["./node_modules/*", "../../node_modules/*"]
     },
     "types": ["vite/client"],
@@ -24,6 +25,11 @@
       "../../node_modules/@types"
     ]
   },
-  "include": ["vite.config.ts", "components/**/*", "composables/**/*"],
+  "include": [
+    "vite.config.ts",
+    "components/**/*",
+    "composables/**/*",
+    ".vitepress/theme/components/Announcement.vue"
+  ],
   "exclude": ["node_modules", "dist"]
 }

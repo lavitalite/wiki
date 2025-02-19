@@ -13,6 +13,15 @@ import { groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-ico
 const logger = createLogger();
 
 export default defineConfig({
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `
+  //         @use "./.vitepress/theme/styles/settings/_colors.scss";
+  //       `
+  //     }
+  //   }
+  // },
   optimizeDeps: {
     exclude: [
       'vitepress',
@@ -23,6 +32,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@utils": resolve(__dirname, "./utils"),
+      "@components": resolve(__dirname, "./.vitepress/theme/components"),
       "@": resolve(__dirname, "./content"),
       "@oss": resolve(__dirname, "./oss"),
     }
@@ -67,9 +77,9 @@ export default defineConfig({
     groupIconVitePlugin({
       customIcon: {
         'docker': 'vscode-icons:file-type-docker2',
-        'k8s': localIconLoader(import.meta.url, './assets/devicon--kubernetes.svg'),
-        'dir': localIconLoader(import.meta.url, './assets/mingcute--directory-line.svg'),
-        'bnf': localIconLoader(import.meta.url, './assets/file-icons--bnf.svg'),
+        'k8s': localIconLoader(import.meta.url, './assets/kubernetes.svg'),
+        'dir': localIconLoader(import.meta.url, './assets/directory-line.svg'),
+        'bnf': localIconLoader(import.meta.url, './assets/bnf.svg'),
       },
     }),
 

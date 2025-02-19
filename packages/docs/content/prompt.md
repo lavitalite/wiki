@@ -52,10 +52,12 @@ services for areas like monitoring, database wrapping, rate limiting
 
 configurable easy to intergrate with continuous delivery workflows
 
-
+lose control hand over the responsibility to a third party
 
  pluggable tools
 
 open source products alternatives
 
 solutions, architectural patterns, or trends that come with tradeoff
+
+most up-to-date

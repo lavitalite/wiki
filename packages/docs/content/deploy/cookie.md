@@ -177,3 +177,51 @@ search engine bots
 customer service bots
 
 
+```
+Name osano_consentmanager
+Provider Osano
+Expiration 1 year
+Purpose Stores the user's current consent status.
+Name osano_consentmanager_uuid
+Provider Osano
+Expiration 1 year
+Purpose Stores the user's unique consent identifier.
+
+```
+
+
+Targeted Advertising
+Used to deliver advertising that is more relevant to you and your interests. May also be used to limit the number of times you see an advertisement and measure the effectiveness of advertising campaigns. Advertising networks usually place them with the website operator’s permission.
+
+
+```
+Name
+^_fbp$
+Provider
+Meta
+Expiration
+ 
+Purpose
+Used by Facebook to deliver a series of advertisement products such as real time bidding from third party advertisers
+```
+
+
+Personalization
+Allow the website to remember choices you make (such as your username, language, or the region you are in) and provide enhanced, more personal features. For example, a website may provide you with local weather reports or traffic news by storing data about your general location.
+
+
+
+Analytics
+Help the website operator understand how its website performs, how visitors interact with the site, and whether there may be technical issues.
+
+
+
+
+Name
+^__hstc$
+Provider
+Hubspot Inc
+Expiration
+ 
+Purpose
+The main cookie for tracking visitors. It contains the domain, utk, initial timestamp (first visit), last timestamp (last visit), current timestamp (this visit),
