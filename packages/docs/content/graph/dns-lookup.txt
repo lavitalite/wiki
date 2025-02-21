@@ -1,0 +1,11 @@
+[ DNS\nRecursive\nResolver ] -> { start: east; end: west; } [ DNS Root\nNameserver ]
+[ DNS\nRecursive\nResolver ] <- { start: west; end: east; } [ DNS Root\nNameserver ]
+
+[ DNS\nRecursive\nResolver ] -> { start: east; end: west; } [ DNS TLD\nNameserver ]
+[ DNS\nRecursive\nResolver ] <- { start: west; end: east; } [ DNS TLD\nNameserver ]
+
+[ DNS\nRecursive\nResolver ] -> { start: east; end: west; } [ cloudflare.com\nAuth Server ]
+[ DNS\nRecursive\nResolver ] <- { start: west; end: east; } [ cloudflare.com\nAuth Server ]
+
+[ DNS\nRecursive\nResolver ] -> { start: east; end: west; } [ blog.cf.com\nAuth Server\n(CNAME) ]
+[ DNS\nRecursive\nResolver ] <- { start: west; end: east; } [ blog.cf.com\nAuth Server\n(CNAME) ]

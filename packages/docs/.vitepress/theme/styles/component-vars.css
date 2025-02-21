@@ -1,0 +1,13 @@
+:root {
+  /**
+  * Component: Announcement
+  * -------------------------------------------------------------------------- */
+
+  --Announcement-bg: var(--vp-c-bg-alt);
+  --Announcement-border: transparent;
+  --Announcement-date-color: var(--vp-c-brand-1);
+  --Announcement-bg-hover: var(--vp-c-brand-soft);
+  --Announcement-border-hover: var(--vp-c-brand-soft);
+  --Announcement-transform-hover: translateY(-1px);
+  --Announcement-transform-active: scale(0.98);
+}

@@ -3,7 +3,7 @@ import { type Theme } from 'vitepress'
 import { h } from 'vue'
 import { useData } from 'vitepress'
 
-import { initSvgSymbols } from "@utils/svg-symbol-register"
+import { initSvgSymbols } from "./utils/client-svg-register"
 
 // import './styles/settings/_colors.scss'
 import './styles/color.css'
@@ -23,7 +23,7 @@ import HomeFooter from './components/home/HomeFooter.vue'
 import { data as FooterData } from './data/footer'
 
 // import 'virtual:group-icons.css'
-initSvgSymbols('../../assets/*.svg')
+await initSvgSymbols()
 
 
 

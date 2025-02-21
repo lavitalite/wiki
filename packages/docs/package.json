@@ -25,7 +25,7 @@
     "markdown-it-footnote": "catalog:",
     "sass": "catalog:",
     "rough-notation": "catalog:",
-    "fast-glob": "catalog:",
+    "tinyglobby": "catalog:",
     "ms": "catalog:"
   }
 }

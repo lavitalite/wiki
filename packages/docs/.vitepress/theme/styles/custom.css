@@ -1,0 +1,121 @@
+/* glow effect  */
+
+@keyframes text-glow {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(var(--vp-c-brand-1), 0.5));
+  }
+  to {
+    filter: drop-shadow(0 1px 8px rgba(var(--vp-c-brand-1), 1));
+  }
+}
+
+.link.active,
+.link:hover,
+a.pulse.active,
+a.pulse:hover {
+  animation: text-glow 1.5s ease-in-out infinite alternate;
+}
+
+.text-gradient {
+  --text-color: transparent;
+  --vp-text-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+  color: var(--text-color);
+  background: var(--vp-text-background);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--vp-home-hero-name-color);
+}
+
+/**
+  * underline pulse effect
+
+/
+/* a:not(.unstyle) { */
+.link.pulse,
+a.pulse {
+  display: inline;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.link.pulse:after,
+.link.pulse:before,
+a.pulse:after,
+a.pulse:before {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  display: block;
+  width: 12px;
+  height: 3px;
+  opacity: 0;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.link.pulse:before,
+a.pulse:before {
+  background-image: linear-gradient(
+    90deg,
+    var(--vp-c-brand-soft),
+    var(--vp-c-brand-2)
+  );
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  left: 0;
+}
+
+.link.pulse:after,
+a.pulse:after {
+  background-image: linear-gradient(
+    270deg,
+    var(--vp-c-brand-soft),
+    var(--vp-c-brand-2)
+  );
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  right: 0;
+}
+
+.link.pulse.active:after,
+.link.pulse.active:before,
+.link.pulse:hover:after,
+.link.pulse:hover:before,
+a.pulse.active:after,
+a.pulse.active:before,
+a.pulse:hover:after,
+a.pulse:hover:before {
+  opacity: 1;
+  width: 50%;
+}
+
+/* hide content visually */
+
+.visually-hidden:not(:focus):not(:active) {
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* smooth scroll behaviour*/
+@media (prefers-reduced-motion: no-perference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Only visible in dark(light) mode */
+@media not (prefers-color-scheme: dark) {
+  .only-when-dark {
+    display: none;
+  }
+}
+
+@media not (prefers-color-scheme: light) {
+  .only-when-light {
+    display: none;
+  }
+}

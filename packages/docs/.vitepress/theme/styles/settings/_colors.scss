@@ -1,0 +1,61 @@
+@use "sass:map";
+@use "sass:list";
+$theme-colors: (
+  light: (
+    bg: #ffffff,
+    bg-alt: #f6f6f7,
+    bg-elv: #202127,
+    bg-soft: #f6f6f7,
+  ),
+  dark: (
+    bg: #1b1b1f,
+    bg-alt: #161618,
+    bg-elv: #202127,
+    bg-soft: #202127,
+  ),
+) !default;
+
+$color-scales: (
+  1: 1,
+  2: 0.98,
+  3: 0.8,
+  soft: 0.16,
+) !default;
+
+$color-palette: (
+  "green": (
+    61,
+    214,
+    140,
+  ),
+  "yellow": (
+    255,
+    216,
+    89,
+  ),
+) !default;
+
+@mixin theme-colors {
+  @each $color, $value in $color-palette {
+    @each $level, $opacity in $color-scales {
+      $r: list.nth($value, 1);
+      $g: list.nth($value, 2);
+      $b: list.nth($value, 3);
+      --vp-c-#{$color}-#{$level}: #{rgba($r, $g, $b, $opacity)};
+    }
+  }
+}
+:root {
+  @include theme-colors;
+  --vp-c-brand-1: var(--vp-c-green-1);
+  --vp-c-brand-2: var(--vp-c-green-2);
+  --vp-c-brand-3: var(--vp-c-green-3);
+  --vp-c-brand-soft: var(--vp-c-green-soft);
+}
+
+.dark {
+  --vp-c-brand-1: var(--vp-c-yellow-1);
+  --vp-c-brand-2: var(--vp-c-yellow-2);
+  --vp-c-brand-3: var(--vp-c-yellow-3);
+  --vp-c-brand-soft: var(--vp-c-yellow-soft);
+}

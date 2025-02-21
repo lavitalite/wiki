@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "allowJs": true
+    //bundled declaration file
+  },
+  "include": ["src/index.ts"],
+  "exclude": ["**/node_modules/**", "**/dist/**", "../bump/bin", "scripts"]
+}

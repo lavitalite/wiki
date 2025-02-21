@@ -1,0 +1,71 @@
+@use "sass:map";
+@use "sass:math";
+
+$chip-font-size: 0.875rem !default;
+$chip-height: 32px !default;
+
+$chip-sizes: (
+  "height": $chip-height,
+  "font-size": $chip-font-size,
+) !default;
+
+$size-scales: (
+  "x-small": -0.25,
+  "small": -0.125,
+  "default": 0,
+  "large": 0.125,
+  "x-large": 0.25,
+) !default;
+
+$chip-spacer: 4px;
+
+$chip-densities: (
+  "default": 0,
+  "comfortable": -1,
+  "compact": -2,
+) !default;
+
+// Shadow levels
+$chip-shadows: (
+  1: 0 1px 3px rgba(0, 0, 0, 0.12),
+  2: 0 2px 4px rgba(0, 0, 0, 0.14),
+  3: 0 3px 5px rgba(0, 0, 0, 0.16),
+  4: 0 4px 8px rgba(0, 0, 0, 0.18),
+  5: 0 6px 10px rgba(0, 0, 0, 0.2),
+) !default;
+
+// Variants
+$chip-variants: (
+  "elevated": (
+    "background": var(--v-theme-surface),
+    "color": var(--v-theme-on-surface),
+    "shadow": map.get($chip-shadows, 2),
+  ),
+  "flat": (
+    "background": var(--v-theme-surface),
+    "color": var(--v-theme-on-surface),
+  ),
+  "tonal": (
+    "background": rgba(var(--v-theme-on-surface), 0.08),
+    "color": var(--v-theme-on-surface),
+  ),
+  "outlined": (
+    "border": 1px solid currentColor,
+    "color": var(--v-theme-on-surface),
+  ),
+  "text": (
+    "color": var(--v-theme-on-surface),
+  ),
+) !default;
+
+// Base variables
+$chip-border-radius: 16px !default;
+$chip-label-border-radius: 4px !default;
+$chip-close-size: 18px !default;
+$chip-icon-margin: 4px !default;
+$chip-transition: 0.2s ease-in-out !default;
+$chip-font-weight: 400 !default;
+$chip-disabled-opacity: 0.6 !default;
+$chip-max-width: 100% !default;
+$chip-white-space: nowrap !default;
+$chip-padding-ratio: 2 + math.div(2, 3) !default;
