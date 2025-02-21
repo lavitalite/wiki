@@ -1,0 +1,1 @@
+interest,toy, browser-only version of debug utils [debug](https://www.npmjs.com/package/debug) 

@@ -1,0 +1,31 @@
+digraph dns_lookup {
+    rankdir=LR;
+    node [shape=box, style=filled, fillcolor=white];
+    
+    // Nodes
+    resolver [label="Recursive Resolver"];
+    root [label="DNS Root\nNameserver"];
+    tld [label="DNS TLD\nNameserver"];
+    cf [label="cloudflare.com\nAuth Server"];
+    blog [label="blog.cf.com\nAuth Server\n(CNAME)"];
+    
+    // Edges with labels
+    resolver -> root [label="1"];
+    root -> resolver [label="8"];
+    
+    resolver -> tld [label="2"];
+    tld -> resolver [label="7"];
+    
+    resolver -> cf [label="3"];
+    cf -> resolver [label="6"];
+    
+    resolver -> blog [label="4"];
+    blog -> resolver [label="5"];
+    
+    // Rank to ensure vertical alignment
+    {rank=same; root tld cf blog}
+    
+    // Legend
+    label = "\nLegend:\n---> Query flow (1,2,3,4)\n<--- Response flow (5,6,7,8)";
+    labelloc = "b";
+}

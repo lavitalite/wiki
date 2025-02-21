@@ -1,0 +1,63 @@
+.VPImage {
+  width: 100%;
+  height: 100%;
+  color: var(--vp-c-brand-1);
+  fill: currentColor;
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-alt-border: var(--vp-c-border);
+  --vp-button-alt-text: var(--vp-c-text-1);
+  --vp-button-alt-bg: var(--vp-c-bg-alt);
+
+  --vp-button-alt-hover-border: var(--vp-c-brand-accent);
+  --vp-button-alt-hover-text: var(--vp-c-bg);
+  --vp-button-alt-hover-bg: var(--vp-c-brand-accent);
+  --vp-button-alt-active-border: var(--vp-c-brand-accent);
+  --vp-button-alt-active-text: var(--c-bg);
+  --vp-button-alt-active-bg: var(--vp-c-brand-accent);
+
+  --vp-button-brand-border: var(--vp-c-brand-1);
+  --vp-button-brand-text: var(--vp-c-bg);
+  --vp-button-brand-bg: var(--vp-c-brand-2);
+
+  --vp-button-brand-hover-border: var(--vp-c-brand-accent);
+  --vp-button-brand-hover-text: var(--vp-c-bg);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-accent);
+  --vp-button-brand-active-border: var(--vp-c-brand-accent);
+  --vp-button-brand-active-text: var(--c-bg);
+  --vp-button-brand-active-bg: var(--vp-c-brand-accent);
+
+  --vp-c-sponsor: #db2777;
+  --vp-button-sponsor-border: var(--vp-c-sponsor);
+  --vp-button-sponsor-text: var(--vp-c-text-1);
+  --vp-button-sponsor-bg: var(--vp-c-sponsor);
+  --vp-button-sponsor-hover-border: var(--vp-c-sponsor);
+  --vp-button-sponsor-hover-text: var(--vp-c-sponsor);
+  --vp-button-sponsor-hover-bg: transparent;
+  --vp-button-sponsor-active-border: var(--vp-c-sponsor);
+  --vp-button-sponsor-active-text: var(--c-black-dark);
+  --vp-button-sponsor-active-bg: var(--vp-c-sponsor);
+}
+
+.VPButton.sponsor {
+  border-color: var(--vp-button-sponsor-border);
+  color: var(--vp-button-sponsor-text);
+  background-color: var(--vp-button-sponsor-bg);
+}
+
+.VPButton.sponsor:hover {
+  border-color: var(--vp-button-sponsor-hover-border);
+  color: var(--vp-button-sponsor-hover-text);
+  background-color: var(--vp-button-sponsor-hover-bg);
+}
+
+/* style the activity information */
+.activity-text {
+  color: var(--vp-c-brand-3);
+  font-weight: bold;
+}

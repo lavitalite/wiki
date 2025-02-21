@@ -1,8 +1,12 @@
 {
   "type": "module",
+  "engines": {
+    "node": ">=20.6.0",
+    "pnpm": ">=9.15.2"
+  },
   "scripts": {
     "serve": "vitepress dev --host 0.0.0.0",
-    "dev:debug": "DEBUG=vite:debug-alias,vite:resolve,vite:config vitepress dev ",
+    "dev:debug": "DEBUG=vite:debug-alias,vite:resolve,vite:config,vite:* vitepress dev ",
     "dev:inspect": "node --inspect   node_modules/vitepress dev",
     "build:react": "FRAMEWORK=react vite build",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly --outDir ./dist/types --project tsconfig.build.json",
@@ -15,6 +19,13 @@
     "vitepress-plugin-group-icons": "catalog:",
     "vite-plugin-inspect": "catalog:",
     "msw": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@mdit-vue/shared": "catalog:",
+    "gray-matter": "catalog:",
+    "markdown-it-footnote": "catalog:",
+    "sass": "catalog:",
+    "rough-notation": "catalog:",
+    "tinyglobby": "catalog:",
+    "ms": "catalog:"
   }
 }

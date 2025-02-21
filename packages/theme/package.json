@@ -1,0 +1,15 @@
+{
+  "name": "@ransom/theme",
+  "type": "module",
+  "devDependencies": {
+    "gray-matter": "catalog:",
+    "markdown-it-footnote": "catalog:",
+    "rough-notation": "catalog:",
+    "tinyglobby": "catalog:",
+    "vitepress": "catalog:",
+    "vitepress-plugin-group-icons": "catalog:"
+  },
+  "dependencies": {
+    "debug": "catalog:"
+  }
+}

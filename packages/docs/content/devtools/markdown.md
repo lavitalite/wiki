@@ -1,0 +1,1 @@
+graph-easy --from=graphviz --as=ascii dns-lookup.dot --debug=1

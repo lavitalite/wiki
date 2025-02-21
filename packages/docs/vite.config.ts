@@ -1,6 +1,5 @@
 import { defineConfig, createLogger } from 'vite'
-import path, { resolve } from 'path'
-import { fileURLToPath } from 'node:url'
+import { resolve } from 'path'
 
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -8,11 +7,21 @@ import Inspect from 'vite-plugin-inspect'
 import { groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-icons'
 
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+// import { fileURLToPath } from 'node:url'
+// const __filename = fileURLToPath(import.meta.url)
+// const __dirname = path.dirname(__filename)
 const logger = createLogger();
 
 export default defineConfig({
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `
+  //         @use "./.vitepress/theme/styles/settings/_colors.scss";
+  //       `
+  //     }
+  //   }
+  // },
   optimizeDeps: {
     exclude: [
       'vitepress',
@@ -23,6 +32,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@utils": resolve(__dirname, "./utils"),
+      "@components": resolve(__dirname, "./.vitepress/theme/components"),
       "@": resolve(__dirname, "./content"),
       "@oss": resolve(__dirname, "./oss"),
     }
@@ -67,9 +77,9 @@ export default defineConfig({
     groupIconVitePlugin({
       customIcon: {
         'docker': 'vscode-icons:file-type-docker2',
-        'k8s': localIconLoader(import.meta.url, './assets/devicon--kubernetes.svg'),
-        'dir': localIconLoader(import.meta.url, './assets/mingcute--directory-line.svg'),
-        'bnf': localIconLoader(import.meta.url, './assets/file-icons--bnf.svg'),
+        'k8s': localIconLoader(import.meta.url, './assets/kubernetes.svg'),
+        'dir': localIconLoader(import.meta.url, './assets/directory-line.svg'),
+        'bnf': localIconLoader(import.meta.url, './assets/bnf.svg'),
       },
     }),
 

@@ -1,0 +1,58 @@
+@use "sass:map";
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.v-chip {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  border-radius: 9999px;
+  min-width: 0;
+  max-width: $chip-max-width;
+  white-space: $chip-white-space;
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+
+  @at-root {
+    @include chip-sizes();
+    @include chip-density("height", $chip-densities);
+  }
+
+  // take away from negative CSS margins
+  //  positive margin bring elements closer together,
+  // positive margin bring box model objects away from each other
+  // use case: Offset Padding or overlap
+
+  &--link {
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &--label {
+    border-radius: 4px;
+  }
+
+  &__content,
+  &__prepend,
+  &__append,
+  &__close {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__close {
+    margin-inline-start: 6px;
+    margin-inline-end: -6px;
+    cursor: pointer;
+    user-select: none;
+    flex: 0 1 auto;
+    font-size: $chip-close-size;
+    max-height: $chip-close-size;
+    max-width: $chip-close-size;
+    .v-icon {
+      font-size: inherit;
+    }
+  }
+}

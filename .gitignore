@@ -1,1 +1,8 @@
 node_modules
+dist
+cache
+**/.vitepress/config.ts.timestamp-*
+**/.vitepress/*.timestamp-*
+**/.vitepress/cache
+**/.vitepress/.temp
+**/.vitepress/dist

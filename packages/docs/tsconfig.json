@@ -6,13 +6,15 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./content/*"],
       "~/*": ["./*"],
       "@oss/*": ["./oss/*"],
-      "*": ["./node_modules/*", "../..//node_modules/*"]
+      "/*": ["./"],
+      "*": ["./node_modules/*", "../../node_modules/*"]
     },
     "types": ["vite/client"],
     "typeRoots": [
@@ -23,6 +25,11 @@
       "../../node_modules/@types"
     ]
   },
-  "include": ["vite.config.ts", "components/**/*", "composables/**/*"],
+  "include": [
+    "vite.config.ts",
+    "components/**/*",
+    "composables/**/*",
+    ".vitepress/theme/components/Announcement.vue"
+  ],
   "exclude": ["node_modules", "dist"]
 }

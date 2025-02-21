@@ -6,5 +6,6 @@
   "editor.snippetSuggestions": "top",
   "editor.wordBasedSuggestions": "off",
   "editor.suggest.showWords": false,
-  "editor.suggest.preview": true
+  "editor.suggest.preview": true,
+  "python.languageServer": "None"
 }

@@ -1,0 +1,51 @@
+{
+  "name": "@ransom/debug",
+  "version": "0.0.1",
+  "description": "type safe, less compatible version of debug utils https://www.npmjs.com/package/debug ",
+  "keywords": [
+    "debug",
+    "log",
+    "debugger"
+  ],
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "browser": "./dist/browser.js",
+  "bin": {
+    "debug": "bin/debug.js"
+  },
+  "author": "lavitalite",
+  "license": "MIT",
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  },
+  "scripts": {
+    "build:types": "tsc --declaration --emitDeclarationOnly --outFile dist/index.d.ts",
+    "test": "npm run test:node && npm run test:browser && npm run lint",
+    "test:browser": "tsc && vitest browser.test.js",
+    "test:node": "tsc -p ./src/*.ts  && vitest node.test.js",
+    "release": "node scripts/release.js"
+  },
+  "dependencies": {
+    "ms": "^2.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependenciesMeta": {}
+}
