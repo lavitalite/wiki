@@ -1,6 +1,6 @@
 {
   "name": "vita-ui",
-  "version": "0.0.4",
+  "version": "0.0.22",
   "repository": "git@github.com:xiyuan404/vita-ui.git",
   "license": "MIT",
   "devDependencies": {
