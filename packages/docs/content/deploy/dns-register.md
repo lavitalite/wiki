@@ -996,14 +996,13 @@ cache rules created  via API dashboard/ rule expression builder/ rule expression
 join multi clause via logic operator
 `ip.src == 192.0.2.1 && (tcp.flags.push || tcp.flags.reset)`
 
-
 `<field> <comparison_operator> <value>`
 
 addressing
 
 routing table 
 `<networl><subnet><host>`
- d15358c
+
 `cache hit`:  client device makes a request to the cache for content, and the cache has that content saved. 
  A cache miss occurs when the cache does not have the requested content.
 
@@ -1203,7 +1202,17 @@ Account-scoped datasets use /accounts/{account_id} and Zone-scoped datasets use 
 ```http
 "action_parameters": {
   "request_fields": [
-    { "name": "<http_request_header_name_1_in_lower_case>" },
+    { "name": "<http_request_
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    er_name_1_in_lower_case>" },
     { "name": "<http_request_header_name_2_in_lower_case>" },
     // ...
   ],
