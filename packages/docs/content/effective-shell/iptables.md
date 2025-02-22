@@ -426,7 +426,6 @@ do
 done 
 ```
 
-![chain traver order](@oss/chain-traver-order.png)
 
 ![chain-traverse-for-routed/forward-packet](https://)
 

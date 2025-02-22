@@ -22,8 +22,8 @@ import HomeUnderline from './components/home/HomeUnderline.vue'
 import HomeFooter from './components/home/HomeFooter.vue'
 import { data as FooterData } from './data/footer'
 
-// import 'virtual:group-icons.css'
-await initSvgSymbols()
+// import register icon
+initSvgSymbols()
 
 
 

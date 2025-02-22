@@ -1,5 +1,6 @@
 import { defineConfig, createLogger } from 'vite'
-import { resolve } from 'path'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -10,6 +11,9 @@ import { groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-ico
 // import { fileURLToPath } from 'node:url'
 // const __filename = fileURLToPath(import.meta.url)
 // const __dirname = path.dirname(__filename)
+
+
+const cwd = path.dirname(fileURLToPath(import.meta.url))
 const logger = createLogger();
 
 export default defineConfig({
@@ -31,17 +35,15 @@ export default defineConfig({
   clearScreen: false,
   resolve: {
     alias: {
-      "@utils": resolve(__dirname, "./utils"),
-      "@components": resolve(__dirname, "./.vitepress/theme/components"),
-      "@": resolve(__dirname, "./content"),
-      "@oss": resolve(__dirname, "./oss"),
+      "@utils": path.resolve(cwd, "./utils"),
+      "@components": path.resolve(cwd, "./.vitepress/theme/components"),
+      "@oss": path.resolve(cwd, "oss"),
     }
   },
   plugins: [
     {
       name: 'vite:debug-alias',
       configResolved(config) {
-        debugger
         logger.info(`Alias config: ${JSON.stringify(config.resolve.alias)}`);
       },
       resolveId(id) {

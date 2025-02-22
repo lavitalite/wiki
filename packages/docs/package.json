@@ -1,8 +1,9 @@
 {
+  "name": "wiki",
+  "version": "1.0.0-alpha.2",
   "type": "module",
   "engines": {
-    "node": ">=20.6.0",
-    "pnpm": ">=9.15.2"
+    "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
   },
   "scripts": {
     "serve": "vitepress dev --host 0.0.0.0",
