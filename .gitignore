@@ -1,8 +1,26 @@
-node_modules
-dist
-cache
+
 **/.vitepress/config.ts.timestamp-*
 **/.vitepress/*.timestamp-*
 **/.vitepress/cache
 **/.vitepress/.temp
 **/.vitepress/dist
+
+# hidden files
+.pnpm-store
+.DS_Store
+.idea
+
+
+## temp build output
+*.log
+!debug.log
+.temp
+.tmp
+*.cache
+
+
+# Dependencies
+node_modules
+
+# Build output
+dist
