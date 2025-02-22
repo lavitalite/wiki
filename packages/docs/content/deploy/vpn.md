@@ -29,10 +29,10 @@ send/receive flow
 
 wireguard with easy to connect/deploy(exchanging ssh keys) and configurable
 
-- with [IPsec](): abstraction:layer of separation to academic perfection
+- with [IPsec]: abstraction:layer of separation to academic perfection
 
 ### wireguard
-[WireGuard](), in contrast, starts from flawed layering violations
+[WireGuard], in contrast, starts from flawed layering violations
 using practical engineering solutions and cryptographic techniques that solve real world problems
 
 
@@ -283,7 +283,7 @@ peer match:choosing peer based on the source IP,
 allowed IPs list,
 
 
-- On the other end of the spectrum is [OpenVPN]( )
+- On the other end of the spectrum is [OpenVPN]
  user space TUN/TAP based solution that uses TLS
  kernel space and user spac
 

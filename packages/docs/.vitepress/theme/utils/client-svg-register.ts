@@ -83,9 +83,7 @@ function createSymbolId(relPath: string, opts: Required<LoadSvgSymbolsOptions>):
   }
   id = id.replace(/\[icon-name\]/g, fileName)
 
-
   const lastDotIdx = id.lastIndexOf('.');
-
 
   const extname = lastDotIdx < 0 ? '' : id.slice(lastDotIdx)
   return id.replace(extname, '')
@@ -98,7 +96,7 @@ function createSymbolId(relPath: string, opts: Required<LoadSvgSymbolsOptions>):
 
 
 
-async function compileIcons(opts: Required<LoadSvgSymbolsOptions>): Promise<{ insertHTML: string, idSet: Set<string> }> {
+function compileIcons(opts: Required<LoadSvgSymbolsOptions>): { insertHTML: string, idSet: Set<string> } {
 
 
 
@@ -184,23 +182,23 @@ async function compileIcons(opts: Required<LoadSvgSymbolsOptions>): Promise<{ in
 
 // export async function initSvgSymbols(options: LoadSvgSymbolsOptions): Promise<string[]>
 // export async function initSvgSymbols(iconDirs: string[] | string, options?: Omit<LoadSvgSymbolsOptions, 'iconDirs'>): Promise<string[]>
-export async function initSvgSymbols(rawOpts?: Omit<LoadSvgSymbolsOptions, 'iconDirs'>): Promise<string[]> {
-
-
-  // const rawOpts =
-  //   (typeof iconDirsOrOpts === 'string' || Array.isArray(iconDirsOrOpts))
-  //     ? { ...options, iconDirs: iconDirsOrOpts }
-  //     : iconDirsOrOpts
-
-
-  const opts = {
-    ...loadSvgSymbolsOptionsDefaults,
-    ...rawOpts,
-  } as Required<LoadSvgSymbolsOptions>
-
-  const { insertHTML, idSet } = await compileIcons(opts)
+export function initSvgSymbols(rawOpts?: Omit<LoadSvgSymbolsOptions, 'iconDirs'>): string[] | undefined {
 
   if (typeof window !== 'undefined') {
+
+    // const rawOpts =
+    //   (typeof iconDirsOrOpts === 'string' || Array.isArray(iconDirsOrOpts))
+    //     ? { ...options, iconDirs: iconDirsOrOpts }
+    //     : iconDirsOrOpts
+
+
+    const opts = {
+      ...loadSvgSymbolsOptionsDefaults,
+      ...rawOpts,
+    } as Required<LoadSvgSymbolsOptions>
+
+    const { insertHTML, idSet } = compileIcons(opts)
+
 
     function loadSvgSymbols() {
       let container = document.getElementById(opts.containerId) as SVGElement | null;
@@ -216,9 +214,9 @@ export async function initSvgSymbols(rawOpts?: Omit<LoadSvgSymbolsOptions, 'icon
     } else {
       loadSvgSymbols();
     }
+    return Array.from(idSet)
   }
 
-  return Array.from(idSet)
 }
 
 

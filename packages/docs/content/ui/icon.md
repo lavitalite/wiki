@@ -31,7 +31,7 @@ you can also use custom CSS to set the icon color
 </template>
 
 ```
-the `variant` prop places the [color utility class](/ui/color-variants) `text-${variant}` on the icon's root element
+the `variant` prop places the [color utility class] `text-${variant}` on the icon's root element
 
 
 ## Sizing

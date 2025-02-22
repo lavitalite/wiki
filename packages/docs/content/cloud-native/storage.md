@@ -8,7 +8,7 @@ ad controller
 voulume manage 
 
 
-![alt](@oss/storage-arch.png)
+![alt](/oss/storage-arch.png)
 
 
 用的 Rook 部署的 Ceph 集群就
