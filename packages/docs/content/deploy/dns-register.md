@@ -1003,6 +1003,10 @@ addressing
 routing table 
 `<networl><subnet><host>`
 
+`cache hit`:  client device makes a request to the cache for content, and the cache has that content saved. 
+ A cache miss occurs when the cache does not have the requested content.
+
+
 A CIDR block(netblock) is a collection of IP addresses that share the same network prefix
 rules template
 
@@ -1198,7 +1202,17 @@ Account-scoped datasets use /accounts/{account_id} and Zone-scoped datasets use 
 ```http
 "action_parameters": {
   "request_fields": [
-    { "name": "<http_request_header_name_1_in_lower_case>" },
+    { "name": "<http_request_
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    er_name_1_in_lower_case>" },
     { "name": "<http_request_header_name_2_in_lower_case>" },
     // ...
   ],
