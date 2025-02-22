@@ -996,24 +996,12 @@ cache rules created  via API dashboard/ rule expression builder/ rule expression
 join multi clause via logic operator
 `ip.src == 192.0.2.1 && (tcp.flags.push || tcp.flags.reset)`
 
-<<<<<<< HEAD
 `<field> <comparison_operator> <value>`
 
 addressing
 
 routing table 
 `<networl><subnet><host>`
-||||||| d15358c
-`cache hit`:  client device makes a request to the cache for content, and the cache has that content saved. 
- A cache miss occurs when the cache does not have the requested content.
-=======
-<field> <comparison_operator> <value>
-
-addressing
-
-routing table 
-<networl><subnet><host>
->>>>>>> origin/vitepress-rc
 
 A CIDR block(netblock) is a collection of IP addresses that share the same network prefix
 rules template

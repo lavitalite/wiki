@@ -140,9 +140,7 @@ function onKeyDown(e: KeyboardEvent) {
 }
 </script>
 
-<style scoped lang="scss">
-@import "./VChip.scss";
-
+<style scoped>
 .v-chip.info {
   border-color: var(--vp-badge-info-border);
   color: var(--vp-badge-info-text);
