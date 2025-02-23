@@ -1,0 +1,10 @@
+[build]
+ publish = "docs/.vitepress/dist"
+ command = "pnpm docs:build" 
+ ignore = ""
+
+
+[build.environment]
+NODE_VERSION = "22"
+
+[[redirects]]

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["./content/*"],
+      "@oss/*": ["./oss/*"]
+    },
+    // ./node_modules/@types/node
+    // "types": ["vite/client"],
+    "types": ["node", "vite/client"],
+    // "typeRoots": ["node_modules/@types"]
+    // Make `skipLibCheck: true` the default in --init
+    // feat: add skipLibCheck option in the TS template (defaults to true)
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/playground/**",
+    "**/fixtures/**"
+  ]
+}

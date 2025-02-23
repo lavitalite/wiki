@@ -1,59 +1,61 @@
 {
-  "name": "wiki",
-  "version": "1.0.0-alpha.2",
-  "repository": "git@github.com:lavitalite/wiki.git",
-  "license": "MIT",
-  "devDependencies": {
-    "vite": "catalog:",
-    "unplugin-auto-import": "catalog:",
-    "unplugin-vue-components": "catalog:",
-    "tsx": "catalog:",
-    "typescript": "catalog:",
-    "typescript-eslint": "catalog:"
-  },
-  "packageManager": "pnpm@9.15.2",
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "prettier --write --ignore-unknown"
-  },
-  "type": "module",
-  "engines": {
-    "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
-  },
-  "scripts": {
-    "serve:storybook": "pnpm --filter wiki serve:storybook",
-    "start:docs:ci": "pnpm --filter docs start:ci",
-    "build": "pnpm --filter wiki build",
-    "build:storybook": "pnpm --filter wiki build:storybook",
-    "docs:build": "pnpm --filter docs build",
-    "build:nuxt": "pnpm --filter @vuestic/nuxt build",
-    "test:unit": "pnpm --filter wiki test:unit",
-    "lint": "pnpm --filter wiki lint",
-    "lint:style": "pnpm --filter wiki lint:style",
-    "serve:docs": "pnpm --filter docs serve",
-    "sandbox:vite": "pnpm --filter sandbox dev:vite",
-    "sandbox:nuxt": "pnpm --filter sandbox dev:nuxt",
-    "sandbox:vue-cli": "pnpm --filter sandbox dev:vue-cli",
-    "sandbox:web-components": "pnpm --filter sandbox dev:web-components",
-    "push": "pnpm --filter vita-ui push",
-    "release": "pnpm --filter deploy release",
-    "deploy": "cd packages/docs && pnpm install && pnpm build:docs"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "vite": "*"
-      },
-      "ignoreMissing": [
-        "@algolia/client-search",
-        "postcss",
-        "search-insights"
-      ]
+    "name": "wiki",
+    "version": "1.0.0-alpha.2",
+    "repository": "git@github.com:lavitalite/wiki.git",
+    "license": "MIT",
+    "devDependencies": {
+        "vite": "catalog:",
+        "unplugin-auto-import": "catalog:",
+        "unplugin-vue-components": "catalog:",
+        "tsx": "catalog:",
+        "typescript": "catalog:",
+        "typescript-eslint": "catalog:"
+    },
+    "packageManager": "pnpm@9.15.2",
+    "simple-git-hooks": {
+        "pre-commit": "pnpm lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx,vue,md}": [
+            "prettier --write --ignore-unknown",
+            "eslint --cache --fix"
+        ]
+    },
+    "type": "module",
+    "engines": {
+        "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+    },
+    "scripts": {
+        "serve:storybook": "pnpm --filter wiki serve:storybook",
+        "start:docs:ci": "pnpm --filter docs start:ci",
+        "build": "pnpm --filter wiki build",
+        "build:storybook": "pnpm --filter wiki build:storybook",
+        "build:nuxt": "pnpm --filter @vuestic/nuxt build",
+        "test:unit": "pnpm --filter wiki test:unit",
+        "lint": "pnpm --filter wiki lint",
+        "lint:style": "pnpm --filter wiki lint:style",
+        "serve:docs": "pnpm --filter docs serve",
+        "sandbox:vite": "pnpm --filter sandbox dev:vite",
+        "sandbox:nuxt": "pnpm --filter sandbox dev:nuxt",
+        "sandbox:web-components": "pnpm --filter sandbox dev:web-components",
+        "release": "tsx scripts/release.ts",
+        "docs:build": "pnpm --filter docs run build",
+        "docs:preview": "pnpm --filter docs run preview"
+    },
+    "pnpm": {
+        "peerDependencyRules": {
+            "allowedVersions": {
+                "vite": "*"
+            },
+            "ignoreMissing": [
+                "@algolia/client-search",
+                "postcss",
+                "search-insights"
+            ]
+        },
+        "overrides": {}
+    },
+    "stackblitz": {
+        "startCommand": "pnpm --filter='./packages/docs' run dev"
     }
-  },
-  "stackblitz": {
-    "startCommand": "pnpm --filter='./packages/docs' run dev"
-  }
 }

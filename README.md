@@ -1,7 +1,10 @@
 
+# Wiki [![starline](https://starlines.qoo.monster/assets/lavitalite/wiki)](https://github.com/qoomon/starline)
 <p align="center">
-<img src="packages/docs/content/public/logo-brand.png"  style="background-image: rgba(255, 216, 89, 1);" height="173" alt="wiki logo" />
+<img src="docs/public/logo.svg"  height="173" alt="wiki logo" />
 </p>
+
+
 
 <h1 align="center"> Wiki </h1>
 
@@ -25,17 +28,16 @@
 
 <!-- social badges -->
 <p align="center">
-    <a href="https://discuss.logseq.com">
+    <a href="">
         <img src="https://img.shields.io/badge/forum-Logseq-blue.svg?&color=%2385c8c8&logo=discourse&style=for-the-badge"
             alt="forum"></a>
-    <a href="https://discord.gg/KpN4eHY">
+    <a href="">
         <img src="https://img.shields.io/discord/725182569297215569?color=%2385c8c8&label=Discord&logo=discord&style=for-the-badge"
             alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=logseq">
+    <a href="">
         <img src="https://img.shields.io/badge/twitter-%40logseq-blue.svg?&color=%2385c8c8&logo=twitter&style=for-the-badge"
             alt="follow on Twitter"></a>
 </p>
-
 
 
 

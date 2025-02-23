@@ -1,0 +1,72 @@
+name: "\U0001F41E Bug report"
+description: Create a bug report to help us improve
+labels: ["bug: pending triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        "Thanks for taking the time to fill out this bug report!
+        Wiki is still WIP, Please do not open issue about Usage problem"
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description. Thanks!
+      placeholder: Bug description
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Steps to reproduce the behavior OR Link to minimal reproduction.
+      placeholder: |
+        "1. Navigate to
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What is expected?
+      description: A clear and concise description of what you expected to happen.
+      placeholder: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actually-happening
+    attributes:
+      label: What is actually happening??
+      description: A clear and concise description of what is actually happened.
+      placeholder: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: system-info
+    attributes:
+      label: System Info
+      description: Output of `npx envinfo --system --npmPackages vitepress --binaries --browsers`
+      render: Text
+      placeholder: System, Binaries, Browsers
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: some background/context of how you ran into this bug.
+      placeholder: If applicable, add screenshots to help explain your problem.
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Validations
+      description: Before submitting the issue, please make sure you do the following
+      options:
+        - label: Check if you're on the [latest VitePress version](https://github.com/lavitalite/wiki/releases/latest).
+          required: true
+        - label: Read the docs.
+          required: true
+        - label: The issue I am reporting isn't a duplicate (see FAQs, closed issues, and open issues).
+          required: true
