@@ -2,25 +2,17 @@ import type { NavData } from "./types"
 
 export const data: NavData[] = [
   {
-    title: '工具',
+    title: 'tools',
     items: [
       {
         icon: 'https://simpleicons.org/favicon.ico',
         title: 'Simple Icons',
-        badge: {
-          text: '茂神牛批',
-          type: 'tip',
-        },
         desc: '3269 SVG icons for popular brands',
         link: 'https://simpleicons.org'
       },
       {
         icon: 'https://ionicframework.com/docs',
         title: 'open source UI toolkit',
-        badge: {
-          text: '茂神牛批',
-          type: 'warning',
-        },
         desc: 'building performant, high-quality mobile apps using web technologies — HTML, CSS, and JavaScript — with integrations for popular frameworks like Angular, React, and Vue.',
         link: 'https://ionicframework.com/docs'
       },
@@ -37,12 +29,13 @@ export const data: NavData[] = [
       {
         icon: 'https://docusaurus.io/img/meta_opensource_logo_negative.svg',
         title: 'docusaurus',
-        badge: {
-          text: '请给茂茂点点小星星哦',
-          type: 'info',
-        },
         desc: 'Build optimized websites quickly, focus on your content',
         link: 'https://docusaurus.io/'
+      },
+      {
+        title: 'endoflife.date',
+        desc: 'documents EOL dates and support lifecycles for various products',
+        link: 'https://endoflife.date/nodejs'
       }
     ]
   },
